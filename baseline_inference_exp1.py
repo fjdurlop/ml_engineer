@@ -1,6 +1,8 @@
 """
 Baseline TTS Inference Implementation
-This is the current slow implementation that needs optimization.
+This aselineTTSInference(device=device)is the current slow implementation that needs optimization.
+uv run baseline_inference.py 2>&1 | tee logs/baseline_inference.out
+
 """
 
 import torch
@@ -9,6 +11,16 @@ import time
 import numpy as np
 from typing import List, Dict, Tuple
 import json
+import os
+
+from profiling_utils import GPUProfiler
+
+MODELS_DIR = "models"
+
+profiler = GPUProfiler()
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+
 
 class SimpleTTSModel(nn.Module):
     """
@@ -113,6 +125,7 @@ class SimpleTTSModel(nn.Module):
             stop_pred = self.stop_token(decoder_out)
             return mel_pred, stop_pred
         else:
+            print("SimplifiedTTSModel.forward: Inference mode")
             # Inference mode: autoregressive generation
             mel_output, stop_probs = self.decode_mel(text_encoded)
             audio = self.vocoder_inference(mel_output)
@@ -190,6 +203,15 @@ class BaselineTTSInference:
         
         return results, metrics
 
+    def save_model(self, model_path: str):
+        """Save the pretrained model to the specified path."""
+        # Move model to CPU for compatibility
+        model_to_save = self.model.cpu()
+        torch.save(model_to_save.state_dict(), model_path,)
+        # Move back to original device
+        self.model.to(self.device)
+        print(f"Model saved to {model_path}")
+
 
 def benchmark_baseline(inference_engine: BaselineTTSInference, test_texts: List[str], num_runs: int = 5):
     """
@@ -227,10 +249,11 @@ def benchmark_baseline(inference_engine: BaselineTTSInference, test_texts: List[
     }
     
     print(f"Baseline Results:")
+    print(f"  Num of requests: {num_runs*len(test_texts):.3f}s")
     print(f"  Average Latency: {avg_latency:.3f}s")
     print(f"  95th Percentile Latency: {p95_latency:.3f}s")
     print(f"  Average RTF: {avg_rtf:.3f}")
-    print(f"  Throughput: {throughput:.1f} samples/second")
+    print(f"  Throughput: {throughput:.2f} samples/second")
     
     return results
 
@@ -243,10 +266,61 @@ if __name__ == "__main__":
     test_texts = test_data["texts"]
     
     # Initialize baseline inference
-    inference = BaselineTTSInference()
-    
+    #inference = BaselineTTSInference()
     # Benchmark
-    baseline_results = benchmark_baseline(inference, test_texts)
+    #baseline_results = benchmark_baseline(inference, test_texts)
+    
+    
+    
+    engine = BaselineTTSInference()
+    
+    # texts = ["hello world", "the quick brown fox jumps over the lazy dog"]
+
+    # with profiler.profile_section("tts_batch"):
+    #     baseline_results = benchmark_baseline(engine, test_texts)
+    #     #audios, metrics = engine.synthesize_batch(texts)
+
+    # print("Latency (s):", profiler.timings["tts_batch"])
+    # print("Memory delta (MB):", profiler.memory_usage["tts_batch"])
+    
+    
+    
+    texts = ["hello world"] * 32   # replicate input for fair batching
+
+    def inference_fn(batch):
+        return engine.synthesize(batch)
+    
+    def inference_fn_batch(batch):
+        return engine.batch_synthesize(batch)
+        
+    print("--------- Run 1 ---------")
+    with profiler.profile_section("tts_batch"):
+        baseline_results = benchmark_baseline(engine, test_texts, num_runs=8)
+
+    print("Latency (s):", profiler.timings["tts_batch"])
+    print("Memory delta (MB):", profiler.memory_usage["tts_batch"])
+    
+
+    print("--------- Run 2 ---------")
+    
+    results = profiler.profile_inference_batch(
+        inference_fn_batch,
+        test_texts*8,
+        batch_sizes=[1, 2, 4] # [1, 2, 4, 8, 16] 
+    )
+
+    for bsz, stats in results.items():
+        print(f"\nBatch size {bsz}:")
+        print(f"  Avg latency: {stats['latency']:.4f} s")
+        print(f"  Throughput: {stats['throughput']:.2f} samples/s")
+        print(f"  GPU memory delta: {stats['memory_usage']:.2f} MB")
+        print(f"  GPU utilization: {stats['gpu_utilization']:.1f}%")    
+    
+    
+    print("--------- END ---------")
+    
+    # Save the model to the specified path if needed
+    engine.save_model(f"{MODELS_DIR}/pretrained_tts_model.pt") if not os.path.exists(MODELS_DIR) else None
     
     print("\nIdentified bottlenecks to optimize:")
     print("1. No batching - processing samples individually")

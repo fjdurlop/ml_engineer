@@ -1,0 +1,221 @@
+🔍 Checking system requirements...
+✅ NVIDIA GPU detected.
+Tesla T4, 15360 MiB, 570.172.08
+✅ GPU memory sufficient: 15360 MB
+✅ CUDA toolkit detected: Cuda compilation tools, release 12.8, V12.8.93
+🚀 Setting up Python environment with uv...
+Using CPython 3.12.3 interpreter at: /usr/bin/python3
+Creating virtual environment at: .venv
+Activate with: source .venv/bin/activate
+Resolved 26 packages in 201ms
+Downloading nvidia-cuda-cupti-cu12 (9.8MiB)
+Downloading nvidia-cudnn-cu12 (674.0MiB)
+Downloading torch (846.8MiB)
+Downloading nvidia-curand-cu12 (60.7MiB)
+Downloading nvidia-cufile-cu12 (1.1MiB)
+Downloading triton (148.4MiB)
+Downloading nvidia-nvjitlink-cu12 (37.4MiB)
+Downloading nvidia-cuda-nvrtc-cu12 (84.0MiB)
+Downloading nvidia-cufft-cu12 (184.2MiB)
+Downloading nvidia-nccl-cu12 (307.4MiB)
+Downloading nvidia-cusparselt-cu12 (273.9MiB)
+Downloading torchaudio (3.8MiB)
+Downloading nvidia-cublas-cu12 (566.8MiB)
+Downloading nvidia-cusparse-cu12 (274.9MiB)
+Downloading nvidia-cusolver-cu12 (255.1MiB)
+ Downloading nvidia-cufile-cu12
+ Downloading nvidia-cuda-cupti-cu12
+ Downloading torchaudio
+ Downloading nvidia-nvjitlink-cu12
+ Downloading nvidia-curand-cu12
+ Downloading nvidia-cuda-nvrtc-cu12
+ Downloading triton
+ Downloading nvidia-cufft-cu12
+ Downloading nvidia-cusolver-cu12
+ Downloading nvidia-cusparse-cu12
+ Downloading nvidia-cusparselt-cu12
+ Downloading nvidia-nccl-cu12
+ Downloading nvidia-cublas-cu12
+ Downloading nvidia-cudnn-cu12
+ Downloading torch
+Prepared 20 packages in 35.64s
+Installed 26 packages in 409ms
+ + filelock==3.19.1
+ + fsspec==2025.9.0
+ + jinja2==3.1.6
+ + markupsafe==3.0.2
+ + mpmath==1.3.0
+ + networkx==3.5
+ + nvidia-cublas-cu12==12.8.4.1
+ + nvidia-cuda-cupti-cu12==12.8.90
+ + nvidia-cuda-nvrtc-cu12==12.8.93
+ + nvidia-cuda-runtime-cu12==12.8.90
+ + nvidia-cudnn-cu12==9.10.2.21
+ + nvidia-cufft-cu12==11.3.3.83
+ + nvidia-cufile-cu12==1.13.1.3
+ + nvidia-curand-cu12==10.3.9.90
+ + nvidia-cusolver-cu12==11.7.3.90
+ + nvidia-cusparse-cu12==12.5.8.93
+ + nvidia-cusparselt-cu12==0.7.1
+ + nvidia-nccl-cu12==2.27.3
+ + nvidia-nvjitlink-cu12==12.8.93
+ + nvidia-nvtx-cu12==12.8.90
+ + setuptools==80.9.0
+ + sympy==1.14.0
+ + torch==2.8.0
+ + torchaudio==2.8.0
+ + triton==3.4.0
+ + typing-extensions==4.15.0
+Resolved 15 packages in 593ms
+Downloading numpy (15.9MiB)
+Downloading pandas (11.4MiB)
+Downloading matplotlib (8.3MiB)
+Downloading kiwisolver (1.4MiB)
+Downloading fonttools (4.7MiB)
+ Downloading kiwisolver
+ Downloading fonttools
+ Downloading matplotlib
+ Downloading pandas
+ Downloading numpy
+Prepared 7 packages in 1.49s
+Installed 15 packages in 301ms
+ + contourpy==1.3.3
+ + cycler==0.12.1
+ + fonttools==4.60.0
+ + kiwisolver==1.4.9
+ + matplotlib==3.10.6
+ + numpy==2.3.3
+ + packaging==25.0
+ + pandas==2.3.2
+ + pillow==11.3.0
+ + pyparsing==3.2.5
+ + python-dateutil==2.9.0.post0
+ + pytz==2025.2
+ + seaborn==0.13.2
+ + six==1.17.0
+ + tzdata==2025.2
+Resolved 7 packages in 1.17s
+   Building gputil==1.4.0
+Downloading rapidfuzz (3.0MiB)
+Downloading scipy (34.0MiB)
+ Downloading rapidfuzz
+      Built gputil==1.4.0
+ Downloading scipy
+Prepared 6 packages in 1.38s
+Installed 6 packages in 90ms
+ + gputil==1.4.0
+ + levenshtein==0.27.1
+ + psutil==7.1.0
+ + python-levenshtein==0.27.1
+ + rapidfuzz==3.14.1
+ + scipy==1.16.2
+Resolved 98 packages in 881ms
+Downloading jedi (1.5MiB)
+Downloading debugpy (4.1MiB)
+Downloading jupyterlab (11.7MiB)
+Downloading babel (9.7MiB)
+Downloading widgetsnbextension (2.1MiB)
+Downloading notebook (13.6MiB)
+ Downloading widgetsnbextension
+ Downloading debugpy
+ Downloading notebook
+ Downloading jupyterlab
+ Downloading babel
+ Downloading jedi
+Prepared 78 packages in 984ms
+Installed 90 packages in 323ms
+ + anyio==4.11.0
+ + argon2-cffi==25.1.0
+ + argon2-cffi-bindings==25.1.0
+ + arrow==1.3.0
+ + asttokens==3.0.0
+ + async-lru==2.0.5
+ + attrs==25.3.0
+ + babel==2.17.0
+ + beautifulsoup4==4.13.5
+ + bleach==6.2.0
+ + certifi==2025.8.3
+ + cffi==2.0.0
+ + charset-normalizer==3.4.3
+ + comm==0.2.3
+ + debugpy==1.8.17
+ + decorator==5.2.1
+ + defusedxml==0.7.1
+ + executing==2.2.1
+ + fastjsonschema==2.21.2
+ + fqdn==1.5.1
+ + h11==0.16.0
+ + httpcore==1.0.9
+ + httpx==0.28.1
+ + idna==3.10
+ + ipykernel==6.30.1
+ + ipython==9.5.0
+ + ipython-pygments-lexers==1.1.1
+ + ipywidgets==8.1.7
+ + isoduration==20.11.0
+ + jedi==0.19.2
+ + json5==0.12.1
+ + jsonpointer==3.0.0
+ + jsonschema==4.25.1
+ + jsonschema-specifications==2025.9.1
+ + jupyter==1.1.1
+ + jupyter-client==8.6.3
+ + jupyter-console==6.6.3
+ + jupyter-core==5.8.1
+ + jupyter-events==0.12.0
+ + jupyter-lsp==2.3.0
+ + jupyter-server==2.17.0
+ + jupyter-server-terminals==0.5.3
+ + jupyterlab==4.4.7
+ + jupyterlab-pygments==0.3.0
+ + jupyterlab-server==2.27.3
+ + jupyterlab-widgets==3.0.15
+ + lark==1.3.0
+ + matplotlib-inline==0.1.7
+ + mistune==3.1.4
+ + nbclient==0.10.2
+ + nbconvert==7.16.6
+ + nbformat==5.10.4
+ + nest-asyncio==1.6.0
+ + notebook==7.4.5
+ + notebook-shim==0.2.4
+ + pandocfilters==1.5.1
+ + parso==0.8.5
+ + pexpect==4.9.0
+ + platformdirs==4.4.0
+ + prometheus-client==0.23.1
+ + prompt-toolkit==3.0.52
+ + ptyprocess==0.7.0
+ + pure-eval==0.2.3
+ + pycparser==2.23
+ + pygments==2.19.2
+ + python-json-logger==3.3.0
+ + pyyaml==6.0.2
+ + pyzmq==27.1.0
+ + referencing==0.36.2
+ + requests==2.32.5
+ + rfc3339-validator==0.1.4
+ + rfc3986-validator==0.1.1
+ + rfc3987-syntax==1.1.0
+ + rpds-py==0.27.1
+ + send2trash==1.8.3
+ + sniffio==1.3.1
+ + soupsieve==2.8
+ + stack-data==0.6.3
+ + terminado==0.18.1
+ + tinycss2==1.4.0
+ + tornado==6.5.2
+ + traitlets==5.14.3
+ + types-python-dateutil==2.9.0.20250822
+ + uri-template==1.3.0
+ + urllib3==2.5.0
+ + wcwidth==0.2.14
+ + webcolors==24.11.1
+ + webencodings==0.5.1
+ + websocket-client==1.8.0
+ + widgetsnbextension==4.0.14
+🔍 Verifying PyTorch GPU access...
+✅ PyTorch CUDA available
+   GPU: Tesla T4
+   Memory: 14.56 GB
+✅ Environment setup complete!

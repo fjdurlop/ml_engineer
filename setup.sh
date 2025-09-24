@@ -3,6 +3,7 @@
 # ======================================================
 # Environment Setup Script for ML Engineer Assessment
 # Using uv as the package manager
+# ./setup.sh 2>&1 | tee setup.out
 # ======================================================
 
 set -e
