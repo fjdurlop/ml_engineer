@@ -19,7 +19,7 @@ This repository contains solutions for the Applied Speech ML Engineer technical 
   - [Troubleshooting](#troubleshooting)
 
 ## Prerequisites
-- Python 3.8+
+- Python 3.12+
 - [uv CLI](https://github.com/xthexder/uv) (for package management and script execution)
 - NVIDIA GPU with CUDA (optional, recommended for benchmarking)
 
@@ -37,7 +37,11 @@ chmod +x setup.sh
 ./setup.sh | tee setup.out
 ```
 
+Use pyproject for uv sync in order to reproduce
+
 ## Part 1: TTS Optimization
+Report: [Report_p1](p1.md)
+
 Solution: [`baseline_inference.py`](baseline_inference.py:1)
 
 Usage examples:
@@ -56,11 +60,15 @@ uv run baseline_inference.py --num_runs 5 --batching True\
 ```
 
 Optimizations implemented:
-- INT8 quantization and mixed precision
-- Variable-length continuous batching
-- KV-cache reuse for autoregressive decoding
+- Batching
+- Automated quantization according to device
+  - Supported: fp32, fp16
+- Improvements in memory management
+- KV caching in decoding step, reducing quadratic inference time to linear
 
 ## Part 2: ASR Evaluation
+Report: [Report_p3](p3.md)
+
 Solution: [`asr_evaluation_framework.py`](asr_evaluation_framework.py:1)
 
 Usage:
@@ -100,10 +108,12 @@ uv run asr_eval_dialects.py
 
 Features:
 - WER/CER per dialect and overall
-- Statistical significance testing between models
-- Trade-off analysis: accuracy vs speed vs memory, todo
+- Statistical significance testing accross models and accross dialects
+- Trade-off analysis: accuracy vs speed vs memory # todo
 
 ## Part 3: Streaming ASR System
+Report: [Report_p3](p3.md)
+
 Solution: [`streaming_asr_system.py`](streaming_asr_system.py:1)
 
 Usage:
@@ -112,9 +122,10 @@ uv run streaming_asr_system.py 2>&1 | tee logs/p3/streaming_asr_system.out
 ```
 
 Added to simulate input for streaming
-streaming_ingress.py
-
-
+```bash
+# ran from streaming_asr_system.py
+# streaming_ingress.py
+```
 
 
 ## Future improvement suggestions and roadmap
