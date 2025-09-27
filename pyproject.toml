@@ -1,0 +1,20 @@
+[project]
+name = "ml_engineer"
+version = "0.1.0"
+description = "ASR evaluation framework and streaming ASR experiments"
+readme = "README.md"
+requires-python = ">=3.12"
+
+dependencies = [
+    "torch",
+    "torchaudio",
+    "numpy",
+    "pandas",
+    "scipy",
+    "matplotlib",
+    "seaborn",
+    "pingouin",
+    "scikit-posthocs",
+    "python-Levenshtein",
+]
+
