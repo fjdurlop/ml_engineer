@@ -1,0 +1,46 @@
+Benchmarking baseline TTS inference...
+Baseline Results:
+  Num of requests: 50
+  Average Latency: 3.024s
+  95th Percentile Latency: 3.166s
+  Average RTF: 16.668
+  Throughput: 0.3 samples/second
+
+Profiling Results:
+Section: text_to_tokens
+  Latency (s): 0.02221433162689209
+  Memory delta (MB): 0.00126953125
+  GPU utilization (%): 36.42
+Section: encode_text
+  Latency (s): 0.02643221378326416
+  Memory delta (MB): 0.431640625
+  GPU utilization (%): 26.04
+Section: decode_mel
+  Latency (s): 2.7667077016830444
+  Memory delta (MB): 0.15478515625
+  GPU utilization (%): 97.56
+Section: vocoder_inference
+  Latency (s): 0.02454789638519287
+  Memory delta (MB): 0.015625
+  GPU utilization (%): 96.22
+Section: synchronize
+  Latency (s): 0.022733378410339355
+  Memory delta (MB): 0.0
+  GPU utilization (%): 88.16
+Section: to_cpu
+  Latency (s): 0.022588915824890136
+  Memory delta (MB): 0.0
+  GPU utilization (%): 68.94
+
+Profiling Results:
+Section: inference
+  Latency (s): 3.045998296737671
+  Memory delta (MB): 0.1625
+  GPU utilization (%): 60.8
+
+Identified bottlenecks to optimize:
+1. No batching - processing samples individually
+2. Full precision (FP32) - no quantization
+3. Synchronous operations - not overlapping computation
+4. Inefficient memory usage - storing unnecessary intermediate results
+5. No caching - recomputing static components

@@ -1,0 +1,492 @@
+--------- Exp 5 kv cache False ---------
+Benchmarking baseline TTS inference...
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Baseline Results:
+  Num of requests: 50
+  Average Latency: 2.487s
+  95th Percentile Latency: 3.155s
+  Average RTF: 168.816
+  Throughput: 0.4 samples/second
+
+Profiling Results:
+Section: text_to_tokens
+  Latency (s): 0.020877203941345214
+  Memory delta (MB): 0.00126953125
+  GPU utilization (%): 31.64
+Section: encode_text
+  Latency (s): 0.025529932975769044
+  Memory delta (MB): 0.431640625
+  GPU utilization (%): 23.38
+Section: decode_mel
+  Latency (s): 2.2460874938964843
+  Memory delta (MB): 0.1240234375
+  GPU utilization (%): 79.32
+Section: vocoder_inference
+  Latency (s): 0.023306856155395506
+  Memory delta (MB): 0.01259765625
+  GPU utilization (%): 77.6
+Section: synchronize
+  Latency (s): 0.020882835388183595
+  Memory delta (MB): 0.0
+  GPU utilization (%): 71.9
+Section: to_cpu
+  Latency (s): 0.02091015338897705
+  Memory delta (MB): 0.0
+  GPU utilization (%): 60.44
+--------- Exp 5 kv cache True ---------
+passing to benchmark_baseline kv_cache: True
+Benchmarking baseline TTS inference...
+Quantization precision: tokens torch.int64
+synthesize kv_cache: True
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+synthesize kv_cache: True
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+synthesize kv_cache: True
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+synthesize kv_cache: True
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+synthesize kv_cache: True
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+synthesize kv_cache: True
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+synthesize kv_cache: True
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+synthesize kv_cache: True
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+synthesize kv_cache: True
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+synthesize kv_cache: True
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+synthesize kv_cache: True
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+synthesize kv_cache: True
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+synthesize kv_cache: True
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+synthesize kv_cache: True
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+synthesize kv_cache: True
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+synthesize kv_cache: True
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+synthesize kv_cache: True
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+synthesize kv_cache: True
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+synthesize kv_cache: True
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+synthesize kv_cache: True
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+synthesize kv_cache: True
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+synthesize kv_cache: True
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+synthesize kv_cache: True
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+synthesize kv_cache: True
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+synthesize kv_cache: True
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+synthesize kv_cache: True
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+synthesize kv_cache: True
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+synthesize kv_cache: True
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+synthesize kv_cache: True
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+synthesize kv_cache: True
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+synthesize kv_cache: True
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+synthesize kv_cache: True
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+synthesize kv_cache: True
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+synthesize kv_cache: True
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+synthesize kv_cache: True
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+synthesize kv_cache: True
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+synthesize kv_cache: True
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+synthesize kv_cache: True
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+synthesize kv_cache: True
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+synthesize kv_cache: True
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+synthesize kv_cache: True
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+synthesize kv_cache: True
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+synthesize kv_cache: True
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+synthesize kv_cache: True
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+synthesize kv_cache: True
+Model kv cache: decode_mel_kv_cache
+/home/ubuntu/ml_engineer/.venv/lib/python3.12/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/home/ubuntu/ml_engineer/.venv/lib/python3.12/site-packages/numpy/_core/_methods.py:144: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/ubuntu/ml_engineer/.venv/lib/python3.12/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/home/ubuntu/ml_engineer/.venv/lib/python3.12/site-packages/numpy/_core/_methods.py:144: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+Model kv cache: True
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+synthesize kv_cache: True
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+synthesize kv_cache: True
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+synthesize kv_cache: True
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+synthesize kv_cache: True
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+synthesize kv_cache: True
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization precision: torch.float32, torch.float32, torch.float32
+Baseline Results:
+  Num of requests: 50
+  Average Latency: 1.793s
+  95th Percentile Latency: 2.533s
+  Average RTF: 164.462
+  Throughput: 0.6 samples/second
+
+Profiling Results:
+Section: text_to_tokens
+  Latency (s): 0.021970930099487303
+  Memory delta (MB): 0.00126953125
+  GPU utilization (%): 10.04
+Section: encode_text
+  Latency (s): 0.02436899662017822
+  Memory delta (MB): 0.269140625
+  GPU utilization (%): 5.32
+Section: decode_mel
+  Latency (s): 1.5430219888687133
+  Memory delta (MB): 0.1240234375
+  GPU utilization (%): 23.54
+Section: vocoder_inference
+  Latency (s): 0.02334529399871826
+  Memory delta (MB): 0.01259765625
+  GPU utilization (%): 22.5
+Section: synchronize
+  Latency (s): 0.022175679206848143
+  Memory delta (MB): 0.0
+  GPU utilization (%): 20.34
+Section: to_cpu
+  Latency (s): 0.022079186439514162
+  Memory delta (MB): 0.0
+  GPU utilization (%): 18.68
+
+Profiling Results:
+
+Profiling Results:
+Section: inference
+  Latency (s): nan
+  Memory delta (MB): nan
+  GPU utilization (%): nan
+
+Identified bottlenecks to optimize:
+1. No batching - processing samples individually
+2. Full precision (FP32) - no quantization
+3. Synchronous operations - not overlapping computation
+4. Inefficient memory usage - storing unnecessary intermediate results
+5. No caching - recomputing static components

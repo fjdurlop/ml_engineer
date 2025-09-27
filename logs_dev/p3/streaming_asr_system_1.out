@@ -1,0 +1,83 @@
+DEBUG:torio._extension.utils:Loading FFmpeg6
+DEBUG:torio._extension.utils:Failed to load FFmpeg6 extension.
+Traceback (most recent call last):
+  File "/home/ubuntu/ml_engineer/.venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/ml_engineer/.venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/home/ubuntu/ml_engineer/.venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/home/ubuntu/ml_engineer/.venv/lib/python3.12/site-packages/torch/_ops.py", line 1478, in load_library
+    ctypes.CDLL(path)
+  File "/usr/lib/python3.12/ctypes/__init__.py", line 379, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: libavutil.so.58: cannot open shared object file: No such file or directory
+DEBUG:torio._extension.utils:Loading FFmpeg5
+DEBUG:torio._extension.utils:Failed to load FFmpeg5 extension.
+Traceback (most recent call last):
+  File "/home/ubuntu/ml_engineer/.venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/ml_engineer/.venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/home/ubuntu/ml_engineer/.venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/home/ubuntu/ml_engineer/.venv/lib/python3.12/site-packages/torch/_ops.py", line 1478, in load_library
+    ctypes.CDLL(path)
+  File "/usr/lib/python3.12/ctypes/__init__.py", line 379, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: libavutil.so.57: cannot open shared object file: No such file or directory
+DEBUG:torio._extension.utils:Loading FFmpeg4
+DEBUG:torio._extension.utils:Failed to load FFmpeg4 extension.
+Traceback (most recent call last):
+  File "/home/ubuntu/ml_engineer/.venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/ml_engineer/.venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 108, in _find_versionsed_ffmpeg_extension
+    _load_lib(lib)
+  File "/home/ubuntu/ml_engineer/.venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 94, in _load_lib
+    torch.ops.load_library(path)
+  File "/home/ubuntu/ml_engineer/.venv/lib/python3.12/site-packages/torch/_ops.py", line 1478, in load_library
+    ctypes.CDLL(path)
+  File "/usr/lib/python3.12/ctypes/__init__.py", line 379, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: libavutil.so.56: cannot open shared object file: No such file or directory
+DEBUG:torio._extension.utils:Loading FFmpeg
+DEBUG:torio._extension.utils:Failed to load FFmpeg extension.
+Traceback (most recent call last):
+  File "/home/ubuntu/ml_engineer/.venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 116, in _find_ffmpeg_extension
+    ext = _find_versionsed_ffmpeg_extension(ffmpeg_ver)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/ml_engineer/.venv/lib/python3.12/site-packages/torio/_extension/utils.py", line 106, in _find_versionsed_ffmpeg_extension
+    raise RuntimeError(f"FFmpeg{version} extension is not available.")
+RuntimeError: FFmpeg extension is not available.
+DEBUG:matplotlib:matplotlib data path: /home/ubuntu/ml_engineer/.venv/lib/python3.12/site-packages/matplotlib/mpl-data
+DEBUG:matplotlib:CONFIGDIR=/home/ubuntu/.config/matplotlib
+DEBUG:matplotlib:interactive is False
+DEBUG:matplotlib:platform is linux
+DEBUG:matplotlib:CACHEDIR=/home/ubuntu/.cache/matplotlib
+DEBUG:matplotlib.font_manager:Using fontManager instance from /home/ubuntu/.cache/matplotlib/fontlist-v390.json
+INFO:__main__:Initializing Streaming ASR Engine
+INFO:__main__:Streaming ASR engine started
+INFO:__main__:Added stream 442cb649-f50f-46d1-b298-4d92a0a676fe
+DEBUG:__main__:Enqueuing chunk 0 for stream 442cb649-f50f-46d1-b298-4d92a0a676fe at 1758997236.6217287
+DEBUG:__main__:Chunk 0 enqueued successfully
+INFO:__main__:Partial transcript: 
+INFO:__main__:Finalized stream 442cb649-f50f-46d1-b298-4d92a0a676fe
+INFO:__main__:Final transcript: 
+DEBUG:__main__:Dequeued chunk 0 from stream 442cb649-f50f-46d1-b298-4d92a0a676fe
+Exception in thread Thread-1 (_processing_loop):
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/ml_engineer/streaming_asr_system_1.py", line 305, in _processing_loop
+    ready = self.batch_manager.add_chunk(chunk)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: StreamBatch.add_chunk() missing 1 required positional argument: 'frames'
+INFO:__main__:Streaming ASR engine stopped

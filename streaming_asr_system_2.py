@@ -74,7 +74,6 @@ class StreamState:
     partial_transcript: str
     final_transcript: str
     processed_chunks: int
-    next_chunk_id: int = 0  # add this
     
     def __post_init__(self):
         if not hasattr(self, 'audio_buffer') or self.audio_buffer is None:
@@ -100,7 +99,6 @@ class StreamBatch:
         current_time = time.time()
         time_elapsed = current_time - self.last_batch_time
         
-        logger.info(f"Batch size pending: {len(self.pending_chunks)}, Time elapsed: {time_elapsed:.3f}s")
         return (len(self.pending_chunks) >= self.max_batch_size or 
                 time_elapsed >= self.max_wait_time)
     
@@ -218,9 +216,6 @@ class StreamingASREngine:
             
             stream_state = self.active_streams[stream_id]
             stream_state.last_activity = time.time()
-            
-            chunk_id = stream_state.next_chunk_id
-            stream_state.next_chunk_id += 1  # increment on enqueue
         
         # Create chunk object
         chunk = AudioChunk(
@@ -229,13 +224,6 @@ class StreamingASREngine:
             audio_data=audio_chunk,
             timestamp=time.time()
         )
-        
-        # chunk = AudioChunk(
-        #     stream_id=stream_id,
-        #     chunk_id=chunk_id,
-        #     audio_data=audio_chunk,
-        #     timestamp=time.time()
-        # )
         
         # Add to processing queue
         logger.info(f"Enqueuing chunk {chunk.chunk_id} for stream {stream_id} at {chunk.timestamp}")
@@ -273,70 +261,7 @@ class StreamingASREngine:
             logger.info(f"Finalized stream {stream_id}")
             return final_transcript.strip()
         
-    def _inference(self, batch: List[AudioChunk]) -> str:
-        
-        logger.info(f"Running inference on batch of size {len(batch)}")
-        # Build [B, 1, T_max, F] instead of [B, 1, F, T_max]
-        mels = []
-        lengths = []
-        for c in batch:
-            mel_spec, length = self.frontend.to_mel(c.audio_data)            # [F, T_i]
-            mels.append(mel_spec)
-            lengths.append(length)
-            
-        
 
-        with torch.no_grad():
-            log_probs, output_lengths = self.model(mels, lengths)  # if supported: self.model(batch_input, lengths)
-
-            #logger.info(f"Received {len(transcripts)} transcripts from ASR model")
-            #logger.info(f"Transcripts: {transcripts}")
-            
-            # DEBUG: inspect argmax distribution (before ctc_decode)
-            seq = log_probs[0, :output_lengths[0]].argmax(dim=-1).detach().cpu().numpy()
-            unique, counts = np.unique(seq, return_counts=True)
-            print("argmax tokens (id:count):", dict(zip(unique.tolist(), counts.tolist())))
-            print("top-1 mean prob:", float(log_probs[0, :output_lengths[0]].exp().max(dim=-1).values.mean()))
-                                
-            #print(f"time:{time.time()}, log_probs:{log_probs.shape}, output_lengths:{output_lengths}")
-            predictions = ctc_decode(log_probs, output_lengths)
-            
-        return predictions
-    
-    def _inference_1(self, batch_input) -> str:
-        
-        
-        with torch.no_grad():
-            logger.info("Running ASR model inference")
-            dummy_audio = synthesize_audio_features("Hello world")
-            
-            mel_spec, length = synthesize_audio_features("test text", dialect="standard")
-            mel_spec = mel_spec.to(self.device)
-            length = length.to(self.device)
-            
-            # Measure inference time
-            with torch.no_grad():
-                #print(f"time:{time.time()}, mel_spec:{mel_spec.shape}, length:{length}")
-                log_probs, output_lengths = self.model(mel_spec, length)
-                
-                # DEBUG: inspect argmax distribution (before ctc_decode)
-                seq = log_probs[0, :output_lengths[0]].argmax(dim=-1).detach().cpu().numpy()
-                unique, counts = np.unique(seq, return_counts=True)
-                print("argmax tokens (id:count):", dict(zip(unique.tolist(), counts.tolist())))
-                print("top-1 mean prob:", float(log_probs[0, :output_lengths[0]].exp().max(dim=-1).values.mean()))
-                                    
-                #print(f"time:{time.time()}, log_probs:{log_probs.shape}, output_lengths:{output_lengths}")
-                predictions = ctc_decode(log_probs, output_lengths)
-                logger.info(f"Model produced {len(predictions)} transcripts")
-                transcripts = predictions[0]
-                    
-            #transcripts = self.model(batch_input)
-            #logger.info(f"Received {len(transcripts)} transcripts from ASR model")
-            #logger.info(f"Transcripts: {transcripts}")
-        
-            
-        return transcripts
-    
     def _processing_loop(self):
         """Continuously process queued audio chunks."""
         while self.is_running:
@@ -349,33 +274,20 @@ class StreamingASREngine:
             ready = self.batch_manager.add_chunk(chunk)
             logger.info(f"Added chunk {chunk.chunk_id} to batch, batch size {len(self.batch_manager.pending_chunks)}, ready={ready}")
             if not ready:
-                logger.info("Batch not ready yet, continuing to accumulate")
                 continue
             batch = self.batch_manager.get_batch()
-            
-            batch_input = self.preprocess_batch(batch)
-            
-            # logger.info(f"Processing batch of size {len(batch)} for streams {[c.stream_id for c in batch]}")
-            # # Run model inference
-            # audio_tensors = [torch.from_numpy(c.audio_data).to(self.device) for c in batch]
-            # batch_input = torch.stack(audio_tensors)
-            # with torch.no_grad():
-            #     logger.info("Running ASR model inference")
-            #     transcripts = self.model(batch_input, lengths=None)  # if supported: self.model(batch_input, lengths)
-            #     logger.info(f"Received {len(transcripts)} transcripts from ASR model")
-            #     logger.info(f"Transcripts: {transcripts}")
-            
-            #logger.info(f"batch: {batch}")
-            transcripts = self._inference_1(batch_input)
-            logger.info(f"Transcripts: {transcripts}")            
-
-                
+            logger.info(f"Processing batch of size {len(batch)} for streams {[c.stream_id for c in batch]}")
+            # Run model inference
+            audio_tensors = [torch.from_numpy(c.audio_data).to(self.device) for c in batch]
+            batch_input = torch.stack(audio_tensors)
+            with torch.no_grad():
+                logger.info("Running ASR model inference")
+                transcripts = self.model(batch_input)
+                logger.info(f"Received {len(transcripts)} transcripts from ASR model")
+                logger.info(f"Transcripts: {transcripts}")
             # Update stream states
             with self.stream_lock:
                 for c, transcript in zip(batch, transcripts):
-                    logger.info(f"Updating stream {c.stream_id} with transcript: {transcript}")
-                    logger.info(f"Updating stream {c.stream_id} active streams: {self.active_streams.keys()}")
-                    
                     if c.stream_id in self.active_streams:
                         state = self.active_streams[c.stream_id]
                         state.partial_transcript = transcript
@@ -383,92 +295,7 @@ class StreamingASREngine:
                         self.stats["total_chunks_processed"] += 1
                         logger.info(f"Stream {c.stream_id}: processed chunk {c.chunk_id}, total processed this stream={state.processed_chunks}")
 
-    def preprocess_batch(self, batch: List[AudioChunk]) -> torch.Tensor:
-        """Convert list of AudioChunks to padded tensor batch"""
-        audio_tensors = [torch.from_numpy(c.audio_data).to(self.device) for c in batch]
-        batch_input = torch.stack(audio_tensors)
-        logger.info(f"Preprocessed batch input shape: {batch_input.shape}")
-        return batch_input
-    
 from streaming_ingress import RealTimeFeeder
-
-def synthesize_audio_features(text: str, dialect: str = "standard") -> Tuple[torch.Tensor, torch.Tensor]:
-    """
-    Synthesize mel spectrogram features from text
-    (In real scenario, this would be actual audio files)
-    """
-    # Simulate different dialects with different feature patterns
-    dialect_noise = {
-        "standard": 0.1,
-        "southern": 0.15,
-        "british": 0.12,
-        "australian": 0.14,
-        "indian": 0.18
-    }
-    
-    # Generate synthetic mel spectrogram
-    text_length = len(text)
-    time_steps = max(50, text_length * 3)  # Rough approximation
-    mel_bins = 80
-    
-    # Base spectrogram with some structure
-    mel_spec = torch.randn(mel_bins, time_steps) * 0.5
-    
-    # Add dialect-specific noise
-    noise_level = dialect_noise.get(dialect, 0.1)
-    mel_spec += torch.randn_like(mel_spec) * noise_level
-    
-    # Add some temporal structure
-    for i in range(0, time_steps, 10):
-        end_idx = min(i + 5, time_steps)
-        mel_spec[:, i:end_idx] += torch.randn(mel_bins, end_idx - i) * 0.3
-    
-    length = torch.tensor(time_steps)
-    return mel_spec.transpose(0, 1).unsqueeze(0), length.unsqueeze(0)  # (1, time, mel)
-
-
-def ctc_decode(log_probs: torch.Tensor, lengths: torch.Tensor) -> List[str]:
-        """Simple CTC decoding (greedy)
-            ctc is a method used in sequence modeling tasks where the alignment between input and output sequences is unknown.
-        """
-        batch_size = log_probs.size(0)
-        predictions = []
-        
-        for i in range(batch_size):
-            length = lengths[i].item()
-            
-            # temperature + blank suppression to avoid trivial collapse
-            temperature = 0.7  # <1 sharpens; >1 flattens
-            frame_lp = log_probs[i, :length] / temperature
-
-            # discourage blank (id 0) a bit
-            frame_lp[:, 0] -= 5.0
-
-            sequence = frame_lp.argmax(dim=-1)
-            #sequence = log_probs[i, :length].argmax(dim=-1)
-            
-            # Remove consecutive duplicates and blanks
-            decoded = []
-            prev_token = -1
-            for token in sequence:
-                token = token.item()
-                if token != prev_token and token != 0:  # 0 is blank
-                    decoded.append(token)
-                prev_token = token
-            
-            text = indices_to_text(decoded)
-            predictions.append(text)
-        
-        return predictions
-
-def indices_to_text(indices: List[int]) -> str:
-    """Convert indices back to text"""
-    # Character to index mapping (simplified)
-    char_to_idx = {chr(i): i for i in range(32, 127)}  # ASCII printable
-    char_to_idx['<blank>'] = 0
-    idx_to_char = {v: k for k, v in char_to_idx.items()}
-    chars = [idx_to_char.get(idx, '?') for idx in indices if idx != 0]  # Remove blanks
-    return ''.join(chars)
 
 # Basic usage test of [`StreamingASREngine`](streaming_asr_system.py:87)
 def main():
@@ -505,29 +332,10 @@ def main():
         t = np.arange(args.audio_length, dtype=np.float32) / args.sr
         dummy_audio = 0.1 * np.sin(2 * np.pi * 220 * t).astype(np.float32)  # 220 Hz tone as placeholder
         #dummy_audio = np.zeros(args.audio_length, dtype=np.float32)
-        
-        #dummy_audio = synthesize_audio_features("Hello world")
-        
         partial = engine.process_chunk(stream_id, dummy_audio)
         logger.info(f"Partial transcript: {partial}")
         
-        dummy_audio = synthesize_audio_features("Hello world")
-        dummy_audio = 0.1 * np.sin(2 * np.pi * 220 * t).astype(np.float32)  # 220 Hz tone as placeholder
         
-        partial = engine.process_chunk(stream_id, dummy_audio)
-        logger.info(f"Partial transcript: {partial}")
-        
-        dummy_audio = synthesize_audio_features("Hello world")
-        dummy_audio = 0.1 * np.sin(2 * np.pi * 220 * t).astype(np.float32)  # 220 Hz tone as placeholder
-        
-        partial = engine.process_chunk(stream_id, dummy_audio)
-        logger.info(f"Partial transcript: {partial}")
-        
-        dummy_audio = synthesize_audio_features("Hello world")
-        dummy_audio = 0.1 * np.sin(2 * np.pi * 220 * t).astype(np.float32)  # 220 Hz tone as placeholder
-        
-        partial = engine.process_chunk(stream_id, dummy_audio)
-        logger.info(f"Partial transcript: {partial}")
     
     final = engine.finalize_stream(stream_id)
     logger.info(f"Final transcript: {final}")

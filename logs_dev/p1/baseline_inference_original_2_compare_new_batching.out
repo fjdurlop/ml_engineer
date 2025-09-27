@@ -1,0 +1,142 @@
+/home/ubuntu/ml_engineer/.venv/lib/python3.12/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/home/ubuntu/ml_engineer/.venv/lib/python3.12/site-packages/numpy/_core/_methods.py:144: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+--------- Exp 2 sequential batching---------
+Profiling batch size: 2
+1758926006.0139315 2
+1758926012.174257 2
+1758926018.0798938 2
+1758926024.1109135 2
+1758926030.3633492 2
+1758926036.6177397 2
+1758926042.4855757 2
+1758926048.4242406 2
+1758926054.5041144 2
+1758926060.7660308 2
+Profiling batch size: 4
+1758926067.116804 4
+1758926078.9702284 4
+1758926091.291633 4
+1758926103.472688 4
+1758926115.4797487 4
+Profiling batch size: 8
+1758926128.083104 8
+1758926152.2846668 8
+1758926176.651078 4
+
+Batch size 2:
+  Avg latency: 6.0655 s
+  Throughput: 0.33 samples/s
+  GPU memory delta: 0.81 MB
+  GPU utilization: 55.3%
+
+Batch size 4:
+  Avg latency: 12.1474 s
+  Throughput: 0.33 samples/s
+  GPU memory delta: 0.00 MB
+  GPU utilization: 76.2%
+
+Batch size 8:
+  Avg latency: 20.3503 s
+  Throughput: 0.39 samples/s
+  GPU memory delta: 0.00 MB
+  GPU utilization: 50.7%
+--------- Exp 2 real batching---------
+Profiling batch size: 2
+1758926189.2788796 2
+batch_synthesize_new
+1758926193.7377574 2
+batch_synthesize_new
+1758926198.258935 2
+batch_synthesize_new
+1758926202.8726008 2
+batch_synthesize_new
+1758926207.763562 2
+batch_synthesize_new
+1758926212.7813025 2
+batch_synthesize_new
+1758926217.179273 2
+batch_synthesize_new
+1758926221.7103083 2
+batch_synthesize_new
+1758926226.3239217 2
+batch_synthesize_new
+1758926231.1822271 2
+batch_synthesize_new
+Profiling batch size: 4
+1758926236.185188 4
+batch_synthesize_new
+1758926244.078015 4
+batch_synthesize_new
+1758926252.8174937 4
+batch_synthesize_new
+1758926261.9423306 4
+batch_synthesize_new
+1758926270.0367248 4
+batch_synthesize_new
+Profiling batch size: 8
+1758926279.188164 8
+batch_synthesize_new
+1758926295.6887248 8
+batch_synthesize_new
+1758926313.0706534 4
+batch_synthesize_new
+
+Batch size 2:
+  Avg latency: 4.6456 s
+  Throughput: 0.43 samples/s
+  GPU memory delta: 0.00 MB
+  GPU utilization: 97.2%
+
+Batch size 4:
+  Avg latency: 8.5569 s
+  Throughput: 0.47 samples/s
+  GPU memory delta: 0.00 MB
+  GPU utilization: 99.2%
+
+Batch size 8:
+  Avg latency: 14.3132 s
+  Throughput: 0.56 samples/s
+  GPU memory delta: 0.00 MB
+  GPU utilization: 100.0%
+--------- END ---------
+
+Profiling Results:
+Section: text_to_tokens
+  Latency (s): 0.022812187671661377
+  Memory delta (MB): 0.00126953125
+  GPU utilization (%): 49.43333333333333
+Section: encode_text
+  Latency (s): 0.027056061304532565
+  Memory delta (MB): 0.6627604166666666
+  GPU utilization (%): 43.6025641025641
+Section: decode_mel
+  Latency (s): 3.804004987080892
+  Memory delta (MB): 0.25792518028846156
+  GPU utilization (%): 97.94871794871794
+Section: vocoder_inference
+  Latency (s): 0.024605607375120506
+  Memory delta (MB): 0.023788060897435896
+  GPU utilization (%): 95.97435897435898
+Section: synchronize
+  Latency (s): 0.022918570041656493
+  Memory delta (MB): 0.0
+  GPU utilization (%): 87.56666666666666
+Section: to_cpu
+  Latency (s): 0.022806743780771892
+  Memory delta (MB): 0.0
+  GPU utilization (%): 73.18333333333334
+
+Profiling Results:
+Section: inference
+  Latency (s): nan
+  Memory delta (MB): nan
+  GPU utilization (%): nan
+
+Identified bottlenecks to optimize:
+1. No batching - processing samples individually
+2. Full precision (FP32) - no quantization
+3. Synchronous operations - not overlapping computation
+4. Inefficient memory usage - storing unnecessary intermediate results
+5. No caching - recomputing static components

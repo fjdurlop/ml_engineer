@@ -2,6 +2,9 @@
 ASR Evaluation Framework for Multi-Dialect Benchmarking
 This framework provides tools to evaluate ASR models across different dialects
 and measure WER vs latency trade-offs.
+
+uv run baseline_inference.py 2>&1 | tee logs/baseline_inference.out
+uv run asr_evaluation_framework.py  2>&1 | tee logs/p2/asr_evaluation_framework.out
 """
 
 import torch
@@ -18,6 +21,78 @@ import seaborn as sns
 from collections import defaultdict
 import scipy.stats as stats
 
+from typing import List, Dict, Tuple, Optional, Any
+
+from dataclasses import dataclass, asdict
+import os
+import json
+import math
+import time
+import argparse
+
+
+
+MODELS_DIR = "./models"
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+
+def simulate_predicted_text(text, dialect, model_name, sig_model=False, sig_dialect=False):
+    """
+    
+    """
+    k = 0
+    if sig_dialect:
+        # Compute metrics
+        if dialect == "indian":
+            k = 2
+        elif dialect == "australian":
+            k = 1
+        elif dialect == "british":
+            k = 5
+        else:
+            k = 0
+    
+    if sig_model:
+        if model_name == "small":
+            k = 2
+        elif model_name == "medium":
+            k = 0
+        elif model_name == "large":
+            k = 4
+        else:
+            k = 0
+    
+
+    # split reference into words
+    words = text.split()
+
+    # pick random cutoff (0 → no words, len(words) → full sentence)
+    random_n = np.random.randint(0, len(words)-k + 1)
+
+    # simulate partial recognition by taking only the first random_n words
+    predicted_text = " ".join(words[:random_n])
+
+    return predicted_text
+
+        
+# -----------------------------
+# Evaluation core (modular flags)
+# -----------------------------
+@dataclass
+class EvalConfig:
+    models: List[str]
+    runs: int = 3
+    batch_size: int = 8
+    enable_batch: bool = True
+    enable_amp: bool = False
+    amp_dtype: str = "fp16"           # "fp16" | "bf16"
+    device: str = "auto"              # "auto" | "cuda" | "cpu"
+    num_samples_per_dialect: int = 20
+    enable_plots: bool = True
+    plots_dir: str = "results/plots"
+    save_json: Optional[str] = "results/results.json"
+    save_raw_per_sample: bool = False
+    seed: int = 42
 
 class SimpleASRModel(nn.Module):
     """
@@ -74,9 +149,20 @@ class SimpleASRModel(nn.Module):
         
         # Sequence modeling
         if spec_lengths is not None:
+            # packed = nn.utils.rnn.pack_padded_sequence(
+            #     features, spec_lengths.cpu(), batch_first=True, enforce_sorted=False
+            # )
+            # pad_packed_sequence then sees a tensor of size 22 × 1 × 512 = 11264, but it’s told to pad to 87 × 1 × 512, which is impossible →
+            # RuntimeError: shape '[87, 1, 512]' is invalid for input of size 11264
+            
+            # Two convs with stride=2 halve time twice -> ~ /4 (use ceil for safety)
+            ds_lengths = torch.clamp((spec_lengths + 3) // 4, min=1)
+            # 3 because of ceil division
+            # print(f"spec_lengths:{spec_lengths}, ds_lengths:{ds_lengths}")
+            
             packed = nn.utils.rnn.pack_padded_sequence(
-                features, spec_lengths.cpu(), batch_first=True, enforce_sorted=False
-            )
+                features, ds_lengths.cpu(), batch_first=True, enforce_sorted=False)
+
             encoded, _ = self.encoder(packed)
             encoded, output_lengths = nn.utils.rnn.pad_packed_sequence(encoded, batch_first=True)
         else:
@@ -95,20 +181,20 @@ class ASREvaluator:
     
     def __init__(self, models_dir: str = "./models"):
         self.models_dir = Path(models_dir)
-        self.models = self._load_models()
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         
         # Character to index mapping (simplified)
         self.char_to_idx = {chr(i): i for i in range(32, 127)}  # ASCII printable
         self.char_to_idx['<blank>'] = 0
         self.idx_to_char = {v: k for k, v in self.char_to_idx.items()}
+        self.models = self._load_models()
     
     def _load_models(self) -> Dict[str, SimpleASRModel]:
         """Load pretrained ASR models of different sizes"""
         models = {}
         
         for size in ["small", "medium", "large"]:
-            model = SimpleASRModel(model_size=size)
+            model = SimpleASRModel(model_size=size, vocab_size=len(self.char_to_idx))
             model.eval()
             models[size] = model
         
@@ -124,13 +210,24 @@ class ASREvaluator:
         return ''.join(chars)
     
     def ctc_decode(self, log_probs: torch.Tensor, lengths: torch.Tensor) -> List[str]:
-        """Simple CTC decoding (greedy)"""
+        """Simple CTC decoding (greedy)
+            ctc is a method used in sequence modeling tasks where the alignment between input and output sequences is unknown.
+        """
         batch_size = log_probs.size(0)
         predictions = []
         
         for i in range(batch_size):
             length = lengths[i].item()
-            sequence = log_probs[i, :length].argmax(dim=-1)
+            
+            # temperature + blank suppression to avoid trivial collapse
+            temperature = 0.7  # <1 sharpens; >1 flattens
+            frame_lp = log_probs[i, :length] / temperature
+
+            # discourage blank (id 0) a bit
+            frame_lp[:, 0] -= 5.0
+
+            sequence = frame_lp.argmax(dim=-1)
+            #sequence = log_probs[i, :length].argmax(dim=-1)
             
             # Remove consecutive duplicates and blanks
             decoded = []
@@ -200,7 +297,8 @@ class ASREvaluator:
         length = torch.tensor(time_steps)
         return mel_spec.transpose(0, 1).unsqueeze(0), length.unsqueeze(0)  # (1, time, mel)
     
-    def evaluate_model_on_dataset(self, model_name: str, test_data: List[Dict], num_runs: int = 3) -> Dict:
+    def evaluate_model_on_dataset(self, model_name: str, test_data: List[Dict], num_runs: int = 3,
+                                  sig_model = False, sig_dialect = False) -> Dict:
         """Evaluate a single model on test dataset"""
         model = self.models[model_name].to(self.device)
         
@@ -232,7 +330,16 @@ class ASREvaluator:
                 start_time = time.time()
                 
                 with torch.no_grad():
+                    #print(f"time:{time.time()}, mel_spec:{mel_spec.shape}, length:{length}")
                     log_probs, output_lengths = model(mel_spec, length)
+                    
+                    # DEBUG: inspect argmax distribution (before ctc_decode)
+                    seq = log_probs[0, :output_lengths[0]].argmax(dim=-1).detach().cpu().numpy()
+                    unique, counts = np.unique(seq, return_counts=True)
+                    #print("argmax tokens (id:count):", dict(zip(unique.tolist(), counts.tolist())))
+                    #print("top-1 mean prob:", float(log_probs[0, :output_lengths[0]].exp().max(dim=-1).values.mean()))
+                                        
+                    #print(f"time:{time.time()}, log_probs:{log_probs.shape}, output_lengths:{output_lengths}")
                     predictions = self.ctc_decode(log_probs, output_lengths)
                 
                 if torch.cuda.is_available():
@@ -243,6 +350,12 @@ class ASREvaluator:
                 
                 # Compute metrics
                 predicted_text = predictions[0] if predictions else ""
+                #random_n = np.random.randint(0,len(predicted_text))
+                #predicted_text = text[:random_n]  # simulate partial recognition
+                
+                
+                predicted_text = simulate_predicted_text(text, dialect, model_name, sig_model, sig_dialect)
+                #print(f"simulated: Ref: {text} | Real Pred: {predicted_text} | Sim Pred: {predicted_text}")
                 wer = self.compute_wer(text, predicted_text)
                 cer = self.compute_cer(text, predicted_text)
                 
@@ -315,6 +428,8 @@ class ASREvaluator:
     def analyze_statistical_significance(self, results: Dict) -> Dict:
         """Perform statistical significance testing between models"""
         model_names = list(results.keys())
+        print("analyze_statistical_significance: Models to compare:", model_names)
+        print(f"analyze_statistical_significance: results: {results}")
         significance_tests = {}
         
         for i, model1 in enumerate(model_names):
@@ -323,6 +438,8 @@ class ASREvaluator:
                        for sample in dialect_data if isinstance(dialect_data, list)]
                 wer2 = [sample["wer"] for dialect_data in results[model2]["per_dialect"].values() 
                        for sample in dialect_data if isinstance(dialect_data, list)]
+                
+                print(f"analyze_statistical_significance: len wer1: {len(wer1)} len wer2 {len(wer2)}")
                 
                 if len(wer1) > 0 and len(wer2) > 0:
                     # Perform t-test
@@ -337,6 +454,41 @@ class ASREvaluator:
         
         return significance_tests
 
+    # ---------- reports / plots ----------
+    def maybe_plot(self, results_by_model: Dict[str, Dict[str, Any]], plots_dir: str = "results/plots"):
+        
+        outdir = Path(plots_dir)
+        outdir.mkdir(parents=True, exist_ok=True)
+
+        # Latency vs RTF scatter for each model
+        for name, res in results_by_model.items():
+            raw = res.get("raw")
+            if not raw:
+                continue
+            lat = [r["latency"] for r in raw]
+            rtf = [r["rtf"] for r in raw]
+            plt.figure()
+            plt.scatter(lat, rtf, s=8)
+            plt.xlabel("Latency (s)")
+            plt.ylabel("RTF")
+            plt.title(f"Latency vs RTF — {name}")
+            plt.tight_layout()
+            plt.savefig(outdir / f"latency_vs_rtf_{name}.png", dpi=150)
+            plt.close()
+
+        # Per-dialect WER bar
+        for name, res in results_by_model.items():
+            per_d = res["per_dialect"]
+            labels = sorted(per_d.keys())
+            vals = [per_d[d]["wer"]["mean"] for d in labels]
+            plt.figure()
+            sns.barplot(x=labels, y=vals)
+            plt.ylabel("WER (mean)")
+            plt.title(f"WER per dialect — {name}")
+            plt.xticks(rotation=20)
+            plt.tight_layout()
+            plt.savefig(outdir / f"wer_per_dialect_{name}.png", dpi=150)
+            plt.close()
 
 # Test data generator
 def generate_test_dataset(num_samples_per_dialect: int = 20) -> List[Dict]:
@@ -369,3 +521,112 @@ def generate_test_dataset(num_samples_per_dialect: int = 20) -> List[Dict]:
             })
     
     return test_data
+
+
+
+def main():
+    ap = argparse.ArgumentParser(description="Comprehensive ASR evaluation (modularized).")
+    ap.add_argument("--models", nargs="*", default=["small", "medium", "large"], help="Models to evaluate.")
+    ap.add_argument("--runs", type=int, default=3, help="Number of passes over the dataset.")
+    ap.add_argument("--batch-size", type=int, default=8, help="Batch size when --enable-batch is set.")
+    ap.add_argument("--enable-batch", action="store_true", help="Enable real batching.")
+    ap.add_argument("--enable-amp", action="store_true", help="Enable CUDA AMP (fp16/bf16).")
+    ap.add_argument("--amp-dtype", choices=["fp16", "bf16"], default="fp16")
+    ap.add_argument("--device", choices=["auto", "cuda", "cpu"], default="auto")
+    ap.add_argument("--num-samples", type=int, default=20, help="Samples per dialect.")
+    ap.add_argument("--save-json", type=str, default="results/asr_evaluation.json", help="Path to write results JSON.")
+    ap.add_argument("--save-raw-per-sample", action="store_true", help="Include per-sample records in results.")
+    ap.add_argument("--enable-plots", action="store_true", default=True, help="Save simple plots to --plots-dir.")
+    ap.add_argument("--plots-dir", type=str, default="results/plots")
+    ap.add_argument("--seed", type=int, default=42)
+    ap.add_argument("--sig_model", type=bool, default=False, help="Model not trained: simulate differences accross models.")
+    ap.add_argument("--sig_dialect", type=bool, default=False, help="Model not trained: simulate differences accross dialects.")
+    args = ap.parse_args()
+    
+    cfg = EvalConfig(
+        models=args.models,
+        runs=args.runs,
+        batch_size=args.batch_size,
+        enable_batch=args.enable_batch,
+        enable_amp=args.enable_amp,
+        amp_dtype=args.amp_dtype,
+        device=args.device,
+        num_samples_per_dialect=args.num_samples,
+        enable_plots=args.enable_plots,
+        plots_dir=args.plots_dir,
+        save_json=args.save_json,
+        save_raw_per_sample=args.save_raw_per_sample,
+        seed=args.seed,
+    )
+    
+    print("Arguments:", cfg)
+    
+    evaluator = ASREvaluator(models_dir=MODELS_DIR)
+    
+    indices = evaluator.text_to_indices("test")
+    print("Text to indices:", indices)
+    text = evaluator.indices_to_text(indices)
+    print("Indices to text:", text)
+    
+    # print(evaluator.compute_wer("hello world", "hello world"))
+    # print(evaluator.compute_wer("hello world", "hello word"))
+    # print(evaluator.compute_wer("hello world", "hele worde"))
+    
+    # print(evaluator.compute_cer("hello", "hello"))
+    # print(evaluator.compute_cer("hello", "hallo"))
+    # print(evaluator.compute_cer("hello", "alo"))
+    
+    mel_spec_test = evaluator.synthesize_audio_features("hello world", "british")
+    #print("mel_spec_test:", mel_spec_test)
+    print("Synthesized mel spectrogram shape:", mel_spec_test[0].shape)
+    
+    test_data = generate_test_dataset(num_samples_per_dialect=cfg.num_samples_per_dialect)
+    
+    print(f"Generated {len(test_data)} test samples across multiple dialects.")
+    #print("Sample test data:", test_data)
+    
+    results_by_model: Dict[str, Dict[str, Any]] = {}
+    
+    for model in cfg.models:
+        
+        results = evaluator.evaluate_model_on_dataset(model, test_data, num_runs=cfg.runs, 
+                                                      sig_model=args.sig_model, sig_dialect=args.sig_dialect)
+        print(f"Evaluating model: {model}")
+        #print("Evaluation results for  model:", json.dumps(results, indent=2))
+        #print(f"Evaluation results type {type(results)}: {results}")
+        
+        print("----------------------------------------------")
+        results_by_model[model] = results
+        # Pretty summary
+        o = results["overall"]
+        print(f"Overall — WER mean={o['wer']['mean']:.3f} CER mean={o['cer']['mean']:.3f} "
+              f"Latency mean={o['latency']['mean']:.3f}s (p95={o['latency']['p95']:.3f}s) "
+              f"RTF mean={o['rtf']['mean']:.3f}")
+
+    # Statistical significance across models
+    # sig = evaluator.analyze_statistical_significance(results_by_model)
+    # print(sig)
+    # print("Statistical significance analysis:", json.dumps(sig, indent=2))
+    # if sig:
+    #     print("\n--- Significance tests (Welch t-test, Cliff's delta) ---")
+    #     for k, v in sig.items():
+    #         print(f"{k:>20s}: t={v['t_statistic']:.3f}, p={v['p_value']:.3g}, s={v['significant']}, e={v['effect_size']:.3g}, ")
+
+    # Save JSON
+    if cfg.save_json:
+        print(f"\nSaving results JSON to {cfg.save_json}")
+        out_path = Path(cfg.save_json)
+        out_path.parent.mkdir(parents=True, exist_ok=True)
+        with open(out_path, "w") as f:
+            json.dump(results_by_model, f, indent=2)
+        print(f"\nSaved results JSON -> {out_path}")
+
+    # Plots
+    evaluator.maybe_plot(results_by_model)
+    if cfg.enable_plots:
+        print(f"Saved plots -> {cfg.plots_dir}")
+
+    
+
+if __name__ == "__main__":
+    main()

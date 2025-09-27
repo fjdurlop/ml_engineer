@@ -1,0 +1,11 @@
+INFO:__main__:Initializing Streaming ASR Engine
+INFO:__main__:Streaming ASR engine started
+INFO:__main__:Added stream 7a7d68aa-b86d-4432-8966-9e11de3ccb41
+INFO:__main__:Enqueuing chunk 0 for stream 7a7d68aa-b86d-4432-8966-9e11de3ccb41 at 1758997308.5964868
+INFO:__main__:Chunk 0 enqueued successfully
+INFO:__main__:Dequeued chunk 0 from stream 7a7d68aa-b86d-4432-8966-9e11de3ccb41
+INFO:__main__:Partial transcript: 
+INFO:__main__:Added chunk 0 to batch, batch size 1, ready=False
+INFO:__main__:Finalized stream 7a7d68aa-b86d-4432-8966-9e11de3ccb41
+INFO:__main__:Final transcript: 
+INFO:__main__:Streaming ASR engine stopped

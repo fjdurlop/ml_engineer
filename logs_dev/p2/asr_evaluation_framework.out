@@ -1,0 +1,25 @@
+Arguments: EvalConfig(models=['small', 'medium', 'large'], runs=2, batch_size=8, enable_batch=False, enable_amp=False, amp_dtype='fp16', device='auto', num_samples_per_dialect=20, enable_plots=True, plots_dir='results/plots', save_json='results/asr_evaluation.json', save_raw_per_sample=False, seed=42)
+Text to indices: [116, 101, 115, 116]
+Indices to text: test
+Synthesized mel spectrogram shape: torch.Size([1, 50, 80])
+Generated 100 test samples across multiple dialects.
+Run 1/2 for model small
+Run 2/2 for model small
+Evaluating model: small
+----------------------------------------------
+Overall — WER mean=0.517 CER mean=0.507 Latency mean=0.005s (p95=0.004s) RTF mean=0.004
+Run 1/2 for model medium
+Run 2/2 for model medium
+Evaluating model: medium
+----------------------------------------------
+Overall — WER mean=0.493 CER mean=0.484 Latency mean=0.004s (p95=0.005s) RTF mean=0.003
+Run 1/2 for model large
+Run 2/2 for model large
+Evaluating model: large
+----------------------------------------------
+Overall — WER mean=0.524 CER mean=0.519 Latency mean=0.015s (p95=0.018s) RTF mean=0.010
+
+Saving results JSON to results/asr_evaluation.json
+
+Saved results JSON -> results/asr_evaluation.json
+Saved plots -> results/plots

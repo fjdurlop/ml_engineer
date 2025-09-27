@@ -130,7 +130,7 @@ class GPUProfiler:
                 start_mem = self.get_gpu_memory_usage()
                 start_util = self.get_gpu_utilization()
                 
-                print(time.time(),batch)
+                print(time.time(),len(batch))
                 with self.profile_section(f"batch_size_{batch_size}"):
                     _ = inference_fn(batch)
                 
@@ -156,3 +156,42 @@ class GPUProfiler:
             }
         
         return results
+    
+        
+    def plot_per_section(self, sections: Optional[List[str]] = None, name: str = "profiling_per_section.png"):
+        """Plot timing, mem, gpu_util results for each profiled section"""
+        import matplotlib.pyplot as plt
+        
+        sections = sections
+        
+        #sections = sections.remove("inference") if "inference" in sections else sections
+        
+        # compute average metrics per section
+        avg_times = [np.mean(self.timings[s]) for s in sections]
+        avg_mems = [np.mean(self.memory_usage[s]) for s in sections]
+        avg_utils = [
+            np.mean(self.gpu_utilization_section[s]) if self.gpu_utilization_section[s] else 0 
+            for s in sections
+        ]
+        x = np.arange(len(sections))
+        width = 0.6
+        fig, axs = plt.subplots(3, 1, figsize=(8, 12))
+        # Plot timings
+        axs[0].bar(x, avg_times, width, color='skyblue')
+        axs[0].set_title('Average Execution Time per Section')
+        axs[0].set_ylabel('Time (s)')
+        # Plot memory usage
+        axs[1].bar(x, avg_mems, width, color='lightgreen')
+        axs[1].set_title('Average Memory Usage per Section')
+        axs[1].set_ylabel('Memory (MB)')
+        # Plot GPU utilization
+        axs[2].bar(x, avg_utils, width, color='salmon')
+        axs[2].set_title('Average GPU Utilization per Section')
+        axs[2].set_ylabel('Utilization (%)')
+        # Set x-axis labels
+        for ax in axs:
+            ax.set_xticks(x)
+            ax.set_xticklabels(sections, rotation=45, ha='right')
+        plt.tight_layout()
+        plt.show()
+        plt.savefig(f'logs/{name}.png')

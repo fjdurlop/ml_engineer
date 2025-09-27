@@ -1,0 +1,57 @@
+INFO:__main__:Initializing Streaming ASR Engine
+INFO:__main__:Streaming ASR engine started
+INFO:__main__:Added stream dfb62ab4-ec52-4418-a06a-cd0b87c29871
+INFO:__main__:Enqueuing chunk 0 for stream dfb62ab4-ec52-4418-a06a-cd0b87c29871 at 1758997379.2135546
+INFO:__main__:Chunk 0 enqueued successfully
+INFO:__main__:Dequeued chunk 0 from stream dfb62ab4-ec52-4418-a06a-cd0b87c29871
+INFO:__main__:Batch size pending: 1, Time elapsed: 0.003s
+INFO:__main__:Added chunk 0 to batch, batch size 1, ready=False
+INFO:__main__:Batch not ready yet, continuing to accumulate
+INFO:__main__:Enqueuing chunk 0 for stream dfb62ab4-ec52-4418-a06a-cd0b87c29871 at 1758997379.533632
+INFO:__main__:Chunk 0 enqueued successfully
+INFO:__main__:Dequeued chunk 0 from stream dfb62ab4-ec52-4418-a06a-cd0b87c29871
+INFO:__main__:Batch size pending: 2, Time elapsed: 0.323s
+INFO:__main__:Added chunk 0 to batch, batch size 2, ready=True
+INFO:__main__:Preprocessed batch input shape: torch.Size([2, 5120])
+INFO:__main__:Running ASR model inference
+INFO:__main__:Enqueuing chunk 0 for stream dfb62ab4-ec52-4418-a06a-cd0b87c29871 at 1758997379.853975
+INFO:__main__:Chunk 0 enqueued successfully
+INFO:__main__:Model produced 1 transcripts
+INFO:__main__:Transcripts: ??
+INFO:__main__:Updating stream dfb62ab4-ec52-4418-a06a-cd0b87c29871 with transcript: ?
+INFO:__main__:Updating stream dfb62ab4-ec52-4418-a06a-cd0b87c29871 active streams: dict_keys(['dfb62ab4-ec52-4418-a06a-cd0b87c29871'])
+INFO:__main__:Stream dfb62ab4-ec52-4418-a06a-cd0b87c29871: processed chunk 0, total processed this stream=1
+INFO:__main__:Updating stream dfb62ab4-ec52-4418-a06a-cd0b87c29871 with transcript: ?
+INFO:__main__:Updating stream dfb62ab4-ec52-4418-a06a-cd0b87c29871 active streams: dict_keys(['dfb62ab4-ec52-4418-a06a-cd0b87c29871'])
+INFO:__main__:Stream dfb62ab4-ec52-4418-a06a-cd0b87c29871: processed chunk 0, total processed this stream=2
+INFO:__main__:Dequeued chunk 0 from stream dfb62ab4-ec52-4418-a06a-cd0b87c29871
+INFO:__main__:Batch size pending: 1, Time elapsed: 0.392s
+INFO:__main__:Added chunk 0 to batch, batch size 1, ready=True
+INFO:__main__:Preprocessed batch input shape: torch.Size([1, 5120])
+INFO:__main__:Running ASR model inference
+INFO:__main__:Model produced 1 transcripts
+INFO:__main__:Transcripts: ??
+INFO:__main__:Updating stream dfb62ab4-ec52-4418-a06a-cd0b87c29871 with transcript: ?
+INFO:__main__:Updating stream dfb62ab4-ec52-4418-a06a-cd0b87c29871 active streams: dict_keys(['dfb62ab4-ec52-4418-a06a-cd0b87c29871'])
+INFO:__main__:Stream dfb62ab4-ec52-4418-a06a-cd0b87c29871: processed chunk 0, total processed this stream=3
+INFO:__main__:Enqueuing chunk 3 for stream dfb62ab4-ec52-4418-a06a-cd0b87c29871 at 1758997380.173658
+INFO:__main__:Chunk 3 enqueued successfully
+INFO:__main__:Dequeued chunk 3 from stream dfb62ab4-ec52-4418-a06a-cd0b87c29871
+INFO:__main__:Batch size pending: 1, Time elapsed: 0.248s
+INFO:__main__:Added chunk 3 to batch, batch size 1, ready=True
+INFO:__main__:Preprocessed batch input shape: torch.Size([1, 5120])
+INFO:__main__:Running ASR model inference
+INFO:__main__:Model produced 1 transcripts
+INFO:__main__:Transcripts: ??
+INFO:__main__:Updating stream dfb62ab4-ec52-4418-a06a-cd0b87c29871 with transcript: ?
+INFO:__main__:Updating stream dfb62ab4-ec52-4418-a06a-cd0b87c29871 active streams: dict_keys(['dfb62ab4-ec52-4418-a06a-cd0b87c29871'])
+INFO:__main__:Stream dfb62ab4-ec52-4418-a06a-cd0b87c29871: processed chunk 3, total processed this stream=4
+INFO:__main__:Finalized stream dfb62ab4-ec52-4418-a06a-cd0b87c29871
+INFO:__main__:Final transcript: ?
+INFO:__main__:Streaming ASR engine stopped
+argmax tokens (id:count): {662: 8, 748: 5}
+top-1 mean prob: 0.0010837671579793096
+argmax tokens (id:count): {662: 8, 748: 5}
+top-1 mean prob: 0.0010838145390152931
+argmax tokens (id:count): {662: 8, 748: 5}
+top-1 mean prob: 0.0010838595917448401
