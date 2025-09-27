@@ -1,0 +1,101 @@
+--------- Exp 2 sequential batch---------
+Profiling batch size: 1
+1758924620.4345896 ['Hello world!']
+1758924623.6938052 ['Good morning, how are you today?']
+1758924626.627536 ['The quick brown fox jumps over the lazy dog.']
+1758924629.565928 ['Artificial intelligence is transforming the way we interact with technology.']
+1758924632.5534887 ['In a hole in the ground there lived a hobbit. Not a nasty, dirty, wet hole, filled with the ends of worms and an oozy smell.']
+1758924635.5789728 ["To be or not to be, that is the question. Whether 'tis nobler in the mind to suffer the slings and arrows of outrageous fortune."]
+1758924638.6078582 ['It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness.']
+1758924641.7172763 ['Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.']
+1758924644.833981 ['In the beginning was the Word, and the Word was with God, and the Word was God. The same was in the beginning with God. All things were made by him; and without him was not any thing made that was made.']
+1758924647.9519982 ['Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal. Now we are engaged in a great civil war, testing whether that nation or any nation so conceived and so dedicated, can long endure.']
+1758924651.1569948 ['Hello world!']
+1758924654.3139243 ['Good morning, how are you today?']
+1758924657.3895786 ['The quick brown fox jumps over the lazy dog.']
+1758924660.353291 ['Artificial intelligence is transforming the way we interact with technology.']
+1758924663.3651512 ['In a hole in the ground there lived a hobbit. Not a nasty, dirty, wet hole, filled with the ends of worms and an oozy smell.']
+1758924666.402453 ["To be or not to be, that is the question. Whether 'tis nobler in the mind to suffer the slings and arrows of outrageous fortune."]
+1758924669.4416451 ['It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness.']
+1758924672.5959585 ['Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.']
+1758924675.957617 ['In the beginning was the Word, and the Word was with God, and the Word was God. The same was in the beginning with God. All things were made by him; and without him was not any thing made that was made.']
+1758924679.2575278 ['Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal. Now we are engaged in a great civil war, testing whether that nation or any nation so conceived and so dedicated, can long endure.']
+Profiling batch size: 2
+1758924682.4674957 ['Hello world!', 'Good morning, how are you today?']
+1758924688.3367186 ['The quick brown fox jumps over the lazy dog.', 'Artificial intelligence is transforming the way we interact with technology.']
+1758924694.5103812 ['In a hole in the ground there lived a hobbit. Not a nasty, dirty, wet hole, filled with the ends of worms and an oozy smell.', "To be or not to be, that is the question. Whether 'tis nobler in the mind to suffer the slings and arrows of outrageous fortune."]
+1758924700.6162806 ['It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness.', 'Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.']
+1758924706.9852738 ['In the beginning was the Word, and the Word was with God, and the Word was God. The same was in the beginning with God. All things were made by him; and without him was not any thing made that was made.', 'Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal. Now we are engaged in a great civil war, testing whether that nation or any nation so conceived and so dedicated, can long endure.']
+1758924713.4269779 ['Hello world!', 'Good morning, how are you today?']
+1758924719.3786457 ['The quick brown fox jumps over the lazy dog.', 'Artificial intelligence is transforming the way we interact with technology.']
+1758924725.3480215 ['In a hole in the ground there lived a hobbit. Not a nasty, dirty, wet hole, filled with the ends of worms and an oozy smell.', "To be or not to be, that is the question. Whether 'tis nobler in the mind to suffer the slings and arrows of outrageous fortune."]
+1758924731.4304776 ['It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness.', 'Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.']
+1758924737.6814537 ['In the beginning was the Word, and the Word was with God, and the Word was God. The same was in the beginning with God. All things were made by him; and without him was not any thing made that was made.', 'Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal. Now we are engaged in a great civil war, testing whether that nation or any nation so conceived and so dedicated, can long endure.']
+Profiling batch size: 4
+1758924744.0459397 ['Hello world!', 'Good morning, how are you today?', 'The quick brown fox jumps over the lazy dog.', 'Artificial intelligence is transforming the way we interact with technology.']
+1758924756.3269398 ['In a hole in the ground there lived a hobbit. Not a nasty, dirty, wet hole, filled with the ends of worms and an oozy smell.', "To be or not to be, that is the question. Whether 'tis nobler in the mind to suffer the slings and arrows of outrageous fortune.", 'It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness.', 'Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.']
+1758924769.324784 ['In the beginning was the Word, and the Word was with God, and the Word was God. The same was in the beginning with God. All things were made by him; and without him was not any thing made that was made.', 'Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal. Now we are engaged in a great civil war, testing whether that nation or any nation so conceived and so dedicated, can long endure.', 'Hello world!', 'Good morning, how are you today?']
+1758924781.502843 /home/ubuntu/ml_engineer/.venv/lib/python3.12/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/home/ubuntu/ml_engineer/.venv/lib/python3.12/site-packages/numpy/_core/_methods.py:144: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+['The quick brown fox jumps over the lazy dog.', 'Artificial intelligence is transforming the way we interact with technology.', 'In a hole in the ground there lived a hobbit. Not a nasty, dirty, wet hole, filled with the ends of worms and an oozy smell.', "To be or not to be, that is the question. Whether 'tis nobler in the mind to suffer the slings and arrows of outrageous fortune."]
+1758924793.5207505 ['It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness.', 'Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.', 'In the beginning was the Word, and the Word was with God, and the Word was God. The same was in the beginning with God. All things were made by him; and without him was not any thing made that was made.', 'Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal. Now we are engaged in a great civil war, testing whether that nation or any nation so conceived and so dedicated, can long endure.']
+
+Batch size 1:
+  Avg latency: 3.0563 s
+  Throughput: 0.33 samples/s
+  GPU memory delta: 0.41 MB
+  GPU utilization: 75.5%
+
+Batch size 2:
+  Avg latency: 6.1133 s
+  Throughput: 0.33 samples/s
+  GPU memory delta: 0.00 MB
+  GPU utilization: 75.8%
+
+Batch size 4:
+  Avg latency: 12.3553 s
+  Throughput: 0.32 samples/s
+  GPU memory delta: 0.00 MB
+  GPU utilization: 64.8%
+--------- END ---------
+
+Profiling Results:
+Section: text_to_tokens
+  Latency (s): 0.022487843036651613
+  Memory delta (MB): 0.00126953125
+  GPU utilization (%): 50.0
+Section: encode_text
+  Latency (s): 0.026096558570861815
+  Memory delta (MB): 0.40455729166666665
+  GPU utilization (%): 22.983333333333334
+Section: decode_mel
+  Latency (s): 2.8085139870643614
+  Memory delta (MB): 0.15478515625
+  GPU utilization (%): 97.16666666666667
+Section: vocoder_inference
+  Latency (s): 0.024896764755249025
+  Memory delta (MB): 0.015625
+  GPU utilization (%): 93.96666666666667
+Section: synchronize
+  Latency (s): 0.022581175963083903
+  Memory delta (MB): 0.0
+  GPU utilization (%): 84.53333333333333
+Section: to_cpu
+  Latency (s): 0.02261350154876709
+  Memory delta (MB): 0.0
+  GPU utilization (%): 70.71666666666667
+
+Profiling Results:
+Section: inference
+  Latency (s): nan
+  Memory delta (MB): nan
+  GPU utilization (%): nan
+
+Identified bottlenecks to optimize:
+1. No batching - processing samples individually
+2. Full precision (FP32) - no quantization
+3. Synchronous operations - not overlapping computation
+4. Inefficient memory usage - storing unnecessary intermediate results
+5. No caching - recomputing static components

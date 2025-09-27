@@ -1,0 +1,60 @@
+INFO:__main__:Initializing Streaming ASR Engine
+INFO:__main__:Streaming ASR engine started
+INFO:__main__:Added stream 0667c68f-45f7-4daa-81a5-c193bd0a91ed
+INFO:__main__:Enqueuing chunk 0 for stream 0667c68f-45f7-4daa-81a5-c193bd0a91ed at 1758997421.643882
+INFO:__main__:Chunk 0 enqueued successfully
+INFO:__main__:Dequeued chunk 0 from stream 0667c68f-45f7-4daa-81a5-c193bd0a91ed
+INFO:__main__:Added chunk 0 to batch, batch size 1, ready=False
+INFO:__main__:Enqueuing chunk 0 for stream 0667c68f-45f7-4daa-81a5-c193bd0a91ed at 1758997421.9639447
+INFO:__main__:Chunk 0 enqueued successfully
+INFO:__main__:Dequeued chunk 0 from stream 0667c68f-45f7-4daa-81a5-c193bd0a91ed
+INFO:__main__:Added chunk 0 to batch, batch size 2, ready=True
+INFO:__main__:Processing batch of size 2 for streams ['0667c68f-45f7-4daa-81a5-c193bd0a91ed', '0667c68f-45f7-4daa-81a5-c193bd0a91ed']
+INFO:__main__:Running ASR model inference
+Exception in thread Thread-1 (_processing_loop):
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+  File "/usr/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/ml_engineer/streaming_asr_system_2.py", line 285, in _processing_loop
+    transcripts = self.model(batch_input)
+                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/ml_engineer/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/ml_engineer/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/ml_engineer/asr_evaluation_framework.py", line 147, in forward
+    features = self.feature_extractor(mel_specs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/ml_engineer/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/ml_engineer/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/ml_engineer/.venv/lib/python3.12/site-packages/torch/nn/modules/container.py", line 244, in forward
+    input = module(input)
+            ^^^^^^^^^^^^^
+  File "/home/ubuntu/ml_engineer/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/ml_engineer/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/ml_engineer/.venv/lib/python3.12/site-packages/torch/nn/modules/conv.py", line 548, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ubuntu/ml_engineer/.venv/lib/python3.12/site-packages/torch/nn/modules/conv.py", line 543, in _conv_forward
+    return F.conv2d(
+           ^^^^^^^^^
+RuntimeError: Expected 3D (unbatched) or 4D (batched) input to conv2d, but got input of size: [2, 5120]
+INFO:__main__:Enqueuing chunk 0 for stream 0667c68f-45f7-4daa-81a5-c193bd0a91ed at 1758997422.2839396
+INFO:__main__:Chunk 0 enqueued successfully
+INFO:__main__:Enqueuing chunk 0 for stream 0667c68f-45f7-4daa-81a5-c193bd0a91ed at 1758997422.6039562
+INFO:__main__:Chunk 0 enqueued successfully
+INFO:__main__:Finalized stream 0667c68f-45f7-4daa-81a5-c193bd0a91ed
+INFO:__main__:Final transcript: 
+INFO:__main__:Streaming ASR engine stopped

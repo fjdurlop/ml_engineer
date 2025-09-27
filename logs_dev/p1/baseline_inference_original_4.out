@@ -1,0 +1,189 @@
+/home/ubuntu/ml_engineer/.venv/lib/python3.12/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/home/ubuntu/ml_engineer/.venv/lib/python3.12/site-packages/numpy/_core/_methods.py:144: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/ubuntu/ml_engineer/.venv/lib/python3.12/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/home/ubuntu/ml_engineer/.venv/lib/python3.12/site-packages/numpy/_core/_methods.py:144: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/ubuntu/ml_engineer/.venv/lib/python3.12/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/home/ubuntu/ml_engineer/.venv/lib/python3.12/site-packages/numpy/_core/_methods.py:144: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+--------- Exp 3 precision and device---------
+Benchmarking baseline TTS inference...
+Quantization precision: tokens torch.int64
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Quantization precision: torch.float32, torch.float32, torch.float32
+Baseline Results:
+  Num of requests: 20
+  Average Latency: 2.491s
+  95th Percentile Latency: 3.185s
+  Average RTF: 127.827
+  Throughput: 0.4 samples/second
+
+Profiling Results:
+Section: text_to_tokens
+  Latency (s): 0.022199296951293947
+  Memory delta (MB): 0.00126953125
+  GPU utilization (%): 27.7
+Section: encode_text
+  Latency (s): 0.029439306259155272
+  Memory delta (MB): 0.675390625
+  GPU utilization (%): 14.3
+Section: decode_mel
+  Latency (s): 2.2351832747459413
+  Memory delta (MB): 0.124072265625
+  GPU utilization (%): 79.6
+Section: vocoder_inference
+  Latency (s): 0.025919735431671143
+  Memory delta (MB): 0.01259765625
+  GPU utilization (%): 77.95
+Section: synchronize
+  Latency (s): 0.02175164222717285
+  Memory delta (MB): 0.0
+  GPU utilization (%): 68.5
+Section: to_cpu
+  Latency (s): 0.021631395816802977
+  Memory delta (MB): 0.0
+  GPU utilization (%): 60.25
+--------- Exp 3 precision and device auto ---------
+--------- Exp 3 precision and device---------
+Benchmarking baseline TTS inference...
+Synthesizing text of length 12 with quantization=False, eff_3=True, eff_4=True
+Device: cuda
+Quantization disabled: torch.float32, torch.float32, torch.float32
+Synthesizing text of length 32 with quantization=False, eff_3=True, eff_4=True
+Device: cuda
+Quantization disabled: torch.float32, torch.float32, torch.float32
+Synthesizing text of length 44 with quantization=False, eff_3=True, eff_4=True
+Device: cuda
+Quantization disabled: torch.float32, torch.float32, torch.float32
+Synthesizing text of length 76 with quantization=False, eff_3=True, eff_4=True
+Device: cuda
+Quantization disabled: torch.float32, torch.float32, torch.float32
+Synthesizing text of length 124 with quantization=False, eff_3=True, eff_4=True
+Device: cuda
+Quantization disabled: torch.float32, torch.float32, torch.float32
+Synthesizing text of length 128 with quantization=False, eff_3=True, eff_4=True
+Device: cuda
+Quantization disabled: torch.float32, torch.float32, torch.float32
+Synthesizing text of length 229 with quantization=False, eff_3=True, eff_4=True
+Device: cuda
+Quantization disabled: torch.float32, torch.float32, torch.float32
+Synthesizing text of length 224 with quantization=False, eff_3=True, eff_4=True
+Device: cuda
+Quantization disabled: torch.float32, torch.float32, torch.float32
+Synthesizing text of length 202 with quantization=False, eff_3=True, eff_4=True
+Device: cuda
+Quantization disabled: torch.float32, torch.float32, torch.float32
+Synthesizing text of length 307 with quantization=False, eff_3=True, eff_4=True
+Device: cuda
+Quantization disabled: torch.float32, torch.float32, torch.float32
+Synthesizing text of length 12 with quantization=False, eff_3=True, eff_4=True
+Device: cuda
+Quantization disabled: torch.float32, torch.float32, torch.float32
+Synthesizing text of length 32 with quantization=False, eff_3=True, eff_4=True
+Device: cuda
+Quantization disabled: torch.float32, torch.float32, torch.float32
+Synthesizing text of length 44 with quantization=False, eff_3=True, eff_4=True
+Device: cuda
+Quantization disabled: torch.float32, torch.float32, torch.float32
+Synthesizing text of length 76 with quantization=False, eff_3=True, eff_4=True
+Device: cuda
+Quantization disabled: torch.float32, torch.float32, torch.float32
+Synthesizing text of length 124 with quantization=False, eff_3=True, eff_4=True
+Device: cuda
+Quantization disabled: torch.float32, torch.float32, torch.float32
+Synthesizing text of length 128 with quantization=False, eff_3=True, eff_4=True
+Device: cuda
+Quantization disabled: torch.float32, torch.float32, torch.float32
+Synthesizing text of length 229 with quantization=False, eff_3=True, eff_4=True
+Device: cuda
+Quantization disabled: torch.float32, torch.float32, torch.float32
+Synthesizing text of length 224 with quantization=False, eff_3=True, eff_4=True
+Device: cuda
+Quantization disabled: torch.float32, torch.float32, torch.float32
+Synthesizing text of length 202 with quantization=False, eff_3=True, eff_4=True
+Device: cuda
+Quantization disabled: torch.float32, torch.float32, torch.float32
+Synthesizing text of length 307 with quantization=False, eff_3=True, eff_4=True
+Device: cuda
+Quantization disabled: torch.float32, torch.float32, torch.float32
+Baseline Results:
+  Num of requests: 20
+  Average Latency: 2.368s
+  95th Percentile Latency: 3.052s
+  Average RTF: 76.271
+  Throughput: 0.4 samples/second
+
+Profiling Results:
+Section: text_to_tokens
+  Latency (s): 0.00039991140365600584
+  Memory delta (MB): 0.00126953125
+  GPU utilization (%): nan
+Section: encode_text
+  Latency (s): 0.02583582401275635
+  Memory delta (MB): 0.269140625
+  GPU utilization (%): 64.7
+Section: decode_mel
+  Latency (s): 2.243337059020996
+  Memory delta (MB): 0.124072265625
+  GPU utilization (%): 89.3
+Section: vocoder_inference
+  Latency (s): 0.024749398231506348
+  Memory delta (MB): 0.01259765625
+  GPU utilization (%): 78.65
+--------- Exp 3 precision and device auto ---------
+
+Profiling Results:
+
+Profiling Results:
+Section: inference
+  Latency (s): nan
+  Memory delta (MB): nan
+  GPU utilization (%): nan
+
+Identified bottlenecks to optimize:
+1. No batching - processing samples individually
+2. Full precision (FP32) - no quantization
+3. Synchronous operations - not overlapping computation
+4. Inefficient memory usage - storing unnecessary intermediate results
+5. No caching - recomputing static components

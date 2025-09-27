@@ -1,0 +1,64 @@
+Benchmarking baseline TTS inference...
+SimplifiedTTSModel.forward: Inference mode
+SimplifiedTTSModel.forward: Inference mode
+SimplifiedTTSModel.forward: Inference mode
+SimplifiedTTSModel.forward: Inference mode
+SimplifiedTTSModel.forward: Inference mode
+SimplifiedTTSModel.forward: Inference mode
+SimplifiedTTSModel.forward: Inference mode
+SimplifiedTTSModel.forward: Inference mode
+SimplifiedTTSModel.forward: Inference mode
+SimplifiedTTSModel.forward: Inference mode
+SimplifiedTTSModel.forward: Inference mode
+SimplifiedTTSModel.forward: Inference mode
+SimplifiedTTSModel.forward: Inference mode
+SimplifiedTTSModel.forward: Inference mode
+SimplifiedTTSModel.forward: Inference mode
+SimplifiedTTSModel.forward: Inference mode
+SimplifiedTTSModel.forward: Inference mode
+SimplifiedTTSModel.forward: Inference mode
+SimplifiedTTSModel.forward: Inference mode
+SimplifiedTTSModel.forward: Inference mode
+SimplifiedTTSModel.forward: Inference mode
+SimplifiedTTSModel.forward: Inference mode
+SimplifiedTTSModel.forward: Inference mode
+SimplifiedTTSModel.forward: Inference mode
+SimplifiedTTSModel.forward: Inference mode
+SimplifiedTTSModel.forward: Inference mode
+SimplifiedTTSModel.forward: Inference mode
+SimplifiedTTSModel.forward: Inference mode
+SimplifiedTTSModel.forward: Inference mode
+SimplifiedTTSModel.forward: Inference mode
+SimplifiedTTSModel.forward: Inference mode
+SimplifiedTTSModel.forward: Inference mode
+SimplifiedTTSModel.forward: Inference mode
+SimplifiedTTSModel.forward: Inference mode
+SimplifiedTTSModel.forward: Inference mode
+SimplifiedTTSModel.forward: Inference mode
+SimplifiedTTSModel.forward: Inference mode
+SimplifiedTTSModel.forward: Inference mode
+SimplifiedTTSModel.forward: Inference mode
+SimplifiedTTSModel.forward: Inference mode
+SimplifiedTTSModel.forward: Inference mode
+SimplifiedTTSModel.forward: Inference mode
+SimplifiedTTSModel.forward: Inference mode
+SimplifiedTTSModel.forward: Inference mode
+SimplifiedTTSModel.forward: Inference mode
+SimplifiedTTSModel.forward: Inference mode
+SimplifiedTTSModel.forward: Inference mode
+SimplifiedTTSModel.forward: Inference mode
+SimplifiedTTSModel.forward: Inference mode
+SimplifiedTTSModel.forward: Inference mode
+Baseline Results:
+  Num of requests: 50.000s
+  Average Latency: 2.774s
+  95th Percentile Latency: 2.954s
+  Average RTF: 15.292
+  Throughput: 0.4 samples/second
+
+Identified bottlenecks to optimize:
+1. No batching - processing samples individually
+2. Full precision (FP32) - no quantization
+3. Synchronous operations - not overlapping computation
+4. Inefficient memory usage - storing unnecessary intermediate results
+5. No caching - recomputing static components

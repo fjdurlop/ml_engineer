@@ -1,0 +1,2111 @@
+warmup
+Benchmarking baseline TTS inference...
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Baseline Results:
+  Num of requests: 3
+  Average Latency: 0.327s
+  95th Percentile Latency: 0.454s
+  Average RTF: 901.148
+  Throughput: 3.1 samples/second
+--------- Exp 6 precision and device---------
+Benchmarking baseline TTS inference...
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Baseline Results:
+  Num of requests: 200
+  Average Latency: 0.267s
+  95th Percentile Latency: 0.348s
+  Average RTF: 697.184
+  Throughput: 3.7 samples/second
+
+Profiling Results:
+Section: text_to_tokens
+  Latency (s): 0.021189435949466498
+  Memory delta (MB): 0.0012579856834975369
+  GPU utilization (%): 1.374384236453202
+Section: encode_text
+  Latency (s): 0.024677954283841137
+  Memory delta (MB): 0.30603448275862066
+  GPU utilization (%): 1.1083743842364533
+Section: decode_mel
+  Latency (s): 0.02769036011155603
+  Memory delta (MB): 0.001024669027093596
+  GPU utilization (%): 0.9802955665024631
+Section: vocoder_inference
+  Latency (s): 0.02199849471670066
+  Memory delta (MB): 0.00048828125
+  GPU utilization (%): 0.9310344827586207
+Section: synchronize
+  Latency (s): 0.020949696085135926
+  Memory delta (MB): 0.0
+  GPU utilization (%): 1.0295566502463054
+Section: to_cpu
+  Latency (s): 0.021340156423634495
+  Memory delta (MB): 0.0
+  GPU utilization (%): 1.3251231527093597
+
+Profiling Results:
+Section: inference
+  Latency (s): 0.2892438096953143
+  Memory delta (MB): 0.04002463054187192
+  GPU utilization (%): 1.6748768472906403
+--------- Exp 6 precision and device auto ---------
+major: 7 minor: 5
+Auto-detected device policy: DevicePolicy(device_str='cuda:0', precision='fp16', autocast_dtype=torch.float16)
+prepare_model_for_precision: policy: DevicePolicy(device_str='cuda:0', precision='fp16', autocast_dtype=torch.float16)
+prepare_model_for_precision: policy.precision: fp16
+prepare_model_for_precision: model.half()
+Benchmarking baseline TTS inference...
+Synthesizing text of length 12 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 32 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 44 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 76 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 124 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 128 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 229 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 224 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 202 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 307 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 12 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 32 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 44 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 76 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 124 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 128 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 229 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 224 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 202 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 307 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 12 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 32 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 44 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 76 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 124 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 128 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 229 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 224 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 202 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 307 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 12 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 32 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 44 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 76 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 124 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 128 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 229 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 224 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 202 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 307 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 12 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 32 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 44 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 76 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 124 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 128 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 229 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 224 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 202 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 307 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 12 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 32 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 44 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 76 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 124 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 128 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 229 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 224 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 202 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 307 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 12 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 32 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 44 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 76 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 124 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 128 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 229 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 224 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 202 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 307 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 12 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 32 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 44 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 76 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 124 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 128 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 229 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 224 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 202 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 307 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 12 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 32 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 44 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 76 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 124 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 128 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 229 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 224 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 202 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 307 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 12 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 32 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 44 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 76 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 124 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 128 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 229 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 224 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 202 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 307 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 12 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 32 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 44 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 76 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 124 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 128 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 229 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 224 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 202 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 307 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 12 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 32 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 44 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 76 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 124 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 128 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 229 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 224 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 202 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 307 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 12 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 32 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 44 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 76 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 124 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 128 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 229 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 224 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 202 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 307 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 12 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 32 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 44 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 76 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 124 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 128 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 229 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 224 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 202 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 307 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 12 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 32 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 44 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 76 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 124 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 128 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 229 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 224 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 202 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 307 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 12 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 32 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 44 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 76 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 124 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 128 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 229 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 224 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 202 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 307 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 12 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 32 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 44 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 76 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 124 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 128 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 229 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 224 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 202 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 307 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 12 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 32 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 44 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 76 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 124 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 128 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 229 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 224 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 202 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 307 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 12 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 32 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 44 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 76 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 124 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 128 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 229 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 224 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 202 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 307 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 12 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 32 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 44 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 76 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+/home/ubuntu/ml_engineer/.venv/lib/python3.12/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/home/ubuntu/ml_engineer/.venv/lib/python3.12/site-packages/numpy/_core/_methods.py:144: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/ubuntu/ml_engineer/.venv/lib/python3.12/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/home/ubuntu/ml_engineer/.venv/lib/python3.12/site-packages/numpy/_core/_methods.py:144: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+Synthesizing text of length 124 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 128 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 229 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 224 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 202 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 307 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: torch.float16
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Baseline Results:
+  Num of requests: 200
+  Average Latency: 0.177s
+  95th Percentile Latency: 0.183s
+  Average RTF: 461.819
+  Throughput: 5.7 samples/second
+
+Profiling Results:
+Section: text_to_tokens
+  Latency (s): 0.00034178376197814943
+  Memory delta (MB): 0.00126953125
+  GPU utilization (%): nan
+Section: encode_text
+  Latency (s): 0.024668207168579103
+  Memory delta (MB): 0.269140625
+  GPU utilization (%): 1.04
+Section: decode_mel
+  Latency (s): 0.026803933382034302
+  Memory delta (MB): 0.0009765625
+  GPU utilization (%): 1.065
+Section: vocoder_inference
+  Latency (s): 0.02121857523918152
+  Memory delta (MB): 0.00048828125
+  GPU utilization (%): 1.045
+Section: synchronize
+  Latency (s): nan
+  Memory delta (MB): nan
+  GPU utilization (%): nan
+Section: to_cpu
+  Latency (s): 0.020274603366851808
+  Memory delta (MB): 0.0
+  GPU utilization (%): 1.04
+
+Profiling Results:
+Section: inference
+  Latency (s): 0.1967261815071106
+  Memory delta (MB): 0.0
+  GPU utilization (%): 1.125
+--------- Exp 6 ---------

@@ -1,0 +1,150 @@
+--------- Exp 3 precision and device---------
+Benchmarking baseline TTS inference...
+Quantization precision: tokens torch.int64
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Quantization precision: torch.float32, torch.float32, torch.float32
+Baseline Results:
+  Num of requests: 10
+  Average Latency: 0.286s
+  95th Percentile Latency: 0.395s
+  Average RTF: 789.333
+  Throughput: 3.5 samples/second
+
+Profiling Results:
+Section: text_to_tokens
+  Latency (s): 0.02151014804840088
+  Memory delta (MB): 0.00126953125
+  GPU utilization (%): 2.7
+Section: encode_text
+  Latency (s): 0.03371155261993408
+  Memory delta (MB): 1.081640625
+  GPU utilization (%): 2.5
+Section: decode_mel
+  Latency (s): 0.03344461917877197
+  Memory delta (MB): 0.0009765625
+  GPU utilization (%): 2.3
+Section: vocoder_inference
+  Latency (s): 0.02753303050994873
+  Memory delta (MB): 0.00048828125
+  GPU utilization (%): 1.0
+Section: synchronize
+  Latency (s): 0.021145224571228027
+  Memory delta (MB): 0.0
+  GPU utilization (%): 1.0
+Section: to_cpu
+  Latency (s): 0.020877671241760255
+  Memory delta (MB): 0.0
+  GPU utilization (%): 1.2
+--------- Exp 3 precision and device auto ---------
+major: 7 minor: 5
+Auto-detected device policy: DevicePolicy(device_str='cuda:0', precision='fp16', autocast_dtype=torch.float16)
+Benchmarking baseline TTS inference...
+Quantization precision: tokens torch.int64
+Quantization precision: torch.float16, torch.float16, torch.float16
+Quantization precision: tokens torch.int64
+Quantization precision: torch.float16, torch.float16, torch.float16
+Quantization precision: tokens torch.int64
+Quantization precision: torch.float16, torch.float16, torch.float16
+Quantization precision: tokens torch.int64
+Quantization precision: torch.float16, torch.float16, torch.float16
+Quantization precision: tokens torch.int64
+Quantization precision: torch.float16, torch.float16, torch.float16
+Quantization precision: tokens torch.int64
+Quantization precision: torch.float16, torch.float16, torch.float16
+Quantization precision: tokens torch.int64
+Quantization precision: torch.float16, torch.float16, torch.float16
+Quantization precision: tokens torch.int64
+Quantization precision: torch.float16, torch.float16, torch.float16
+Quantization precision: tokens torch.int64
+Quantization precision: torch.float16, torch.float16, torch.float16
+Quantization precision: tokens torch.int64
+Quantization precision: torch.float16, torch.float16, torch.float16
+Baseline Results:
+  Num of requests: 10
+  Average Latency: 0.279s
+  95th Percentile Latency: 0.375s
+  Average RTF: 768.140
+  Throughput: 3.6 samples/second
+
+Profiling Results:
+Section: text_to_tokens
+  Latency (s): 0.02121713161468506
+  Memory delta (MB): 0.00126953125
+  GPU utilization (%): 0.6
+Section: encode_text
+  Latency (s): 0.0327244758605957
+  Memory delta (MB): 0.1345703125
+  GPU utilization (%): 0.6
+Section: decode_mel
+  Latency (s): 0.028609085083007812
+  Memory delta (MB): 0.0009765625
+  GPU utilization (%): 0.2
+Section: vocoder_inference
+  Latency (s): 0.027354335784912108
+  Memory delta (MB): 0.00048828125
+  GPU utilization (%): 0.3
+Section: synchronize
+  Latency (s): 0.02058582305908203
+  Memory delta (MB): 0.0
+  GPU utilization (%): 0.4
+Section: to_cpu
+  Latency (s): 0.021049761772155763
+  Memory delta (MB): 0.0
+  GPU utilization (%): 0.4
+--------- Exp 3 precision and device---------
+
+Profiling Results:
+Section: text_to_tokens
+  Latency (s): 0.02121713161468506
+  Memory delta (MB): 0.00126953125
+  GPU utilization (%): 0.6
+Section: encode_text
+  Latency (s): 0.0327244758605957
+  Memory delta (MB): 0.1345703125
+  GPU utilization (%): 0.6
+Section: decode_mel
+  Latency (s): 0.028609085083007812
+  Memory delta (MB): 0.0009765625
+  GPU utilization (%): 0.2
+Section: vocoder_inference
+  Latency (s): 0.027354335784912108
+  Memory delta (MB): 0.00048828125
+  GPU utilization (%): 0.3
+Section: synchronize
+  Latency (s): 0.02058582305908203
+  Memory delta (MB): 0.0
+  GPU utilization (%): 0.4
+Section: to_cpu
+  Latency (s): 0.021049761772155763
+  Memory delta (MB): 0.0
+  GPU utilization (%): 0.4
+
+Profiling Results:
+Section: inference
+  Latency (s): 0.29945313930511475
+  Memory delta (MB): 0.0
+  GPU utilization (%): 0.9
+
+Identified bottlenecks to optimize:
+1. No batching - processing samples individually
+2. Full precision (FP32) - no quantization
+3. Synchronous operations - not overlapping computation
+4. Inefficient memory usage - storing unnecessary intermediate results
+5. No caching - recomputing static components

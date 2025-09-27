@@ -1,0 +1,31 @@
+INFO:__main__:Streaming ASR engine started
+INFO:__main__:Added stream b24bde98-df57-457c-b50b-4163f7a0e5b0
+INFO:__main__:num: [0.54027531]
+INFO:__main__:Processing batch of size 2 for streams ['b24bde98-df57-457c-b50b-4163f7a0e5b0', 'b24bde98-df57-457c-b50b-4163f7a0e5b0']
+INFO:__main__:texts: ['7o7', '7o7']
+INFO:__main__:Processing batch of size 1 for streams ['b24bde98-df57-457c-b50b-4163f7a0e5b0']
+INFO:__main__:texts: ['7o7']
+INFO:__main__:Processing batch of size 1 for streams ['b24bde98-df57-457c-b50b-4163f7a0e5b0']
+INFO:__main__:texts: ['7o7']
+INFO:__main__:Processing batch of size 1 for streams ['b24bde98-df57-457c-b50b-4163f7a0e5b0']
+INFO:__main__:texts: ['7o7']
+INFO:__main__:Processing batch of size 1 for streams ['b24bde98-df57-457c-b50b-4163f7a0e5b0']
+INFO:__main__:texts: ['7o7']
+INFO:__main__:Processing batch of size 1 for streams ['b24bde98-df57-457c-b50b-4163f7a0e5b0']
+INFO:__main__:texts: ['7,7']
+INFO:__main__:Finalized stream b24bde98-df57-457c-b50b-4163f7a0e5b0
+INFO:__main__:Final transcript: 7,7
+INFO:__main__:Streaming ASR engine stopped
+Running inference on batch of size [AudioChunk(stream_id='b24bde98-df57-457c-b50b-4163f7a0e5b0', chunk_id=0, audio_data=array([-0.01141683,  0.05652595,  0.09578714, ...,  0.40620756,
+        0.38875067,  0.34389207], shape=(5120,), dtype=float32), timestamp=1758997351.0540657, is_final=False), AudioChunk(stream_id='b24bde98-df57-457c-b50b-4163f7a0e5b0', chunk_id=1, audio_data=array([ 0.30228278,  0.2732723 ,  0.22585997, ..., -0.53522843,
+       -0.5358434 , -0.50467664], shape=(5120,), dtype=float32), timestamp=1758997351.3741398, is_final=False)]
+Running inference on batch of size [AudioChunk(stream_id='b24bde98-df57-457c-b50b-4163f7a0e5b0', chunk_id=2, audio_data=array([-0.5073244 , -0.508376  , -0.46627706, ...,  0.45754606,
+        0.4828118 ,  0.4721752 ], shape=(5120,), dtype=float32), timestamp=1758997351.69462, is_final=False)]
+Running inference on batch of size [AudioChunk(stream_id='b24bde98-df57-457c-b50b-4163f7a0e5b0', chunk_id=3, audio_data=array([ 0.49217165,  0.48880836,  0.50338376, ..., -0.19114259,
+       -0.24028789, -0.2560694 ], shape=(5120,), dtype=float32), timestamp=1758997352.014146, is_final=False)]
+Running inference on batch of size [AudioChunk(stream_id='b24bde98-df57-457c-b50b-4163f7a0e5b0', chunk_id=4, audio_data=array([-0.3032862 , -0.33578125, -0.37844762, ..., -0.14286254,
+       -0.09842254, -0.04928967], shape=(5120,), dtype=float32), timestamp=1758997352.334142, is_final=False)]
+Running inference on batch of size [AudioChunk(stream_id='b24bde98-df57-457c-b50b-4163f7a0e5b0', chunk_id=5, audio_data=array([-0.00973371,  0.04832206,  0.08295366, ...,  0.42011815,
+        0.38065082,  0.3323151 ], shape=(5120,), dtype=float32), timestamp=1758997352.6541352, is_final=False)]
+Running inference on batch of size [AudioChunk(stream_id='b24bde98-df57-457c-b50b-4163f7a0e5b0', chunk_id=6, audio_data=array([0.3087696 , 0.29675278, 0.2247643 , ..., 0.        , 0.        ,
+       0.        ], shape=(5120,), dtype=float32), timestamp=1758997352.9741583, is_final=False)]

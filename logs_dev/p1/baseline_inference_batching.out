@@ -1,0 +1,863 @@
+warmup
+Benchmarking baseline TTS inference...
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Baseline Results:
+  Num of requests: 3
+  Average Latency: 0.335s
+  95th Percentile Latency: 0.469s
+  Average RTF: 922.956
+  Throughput: 3.0 samples/second
+--------- Exp 2 sequential batching---------
+Profiling batch size: 1
+1758995236.7036626 1
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995236.990269 1
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995237.279461 1
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995237.5690904 1
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995237.8568525 1
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995238.1596353 1
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995238.4551349 1
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995238.7495673 1
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995239.040033 1
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995239.3367257 1
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995239.6240969 1
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995239.9158864 1
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995240.207614 1
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995240.4913578 1
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995240.788103 1
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995241.0792851 1
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995241.371951 1
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995241.667901 1
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995241.9643288 1
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995242.2619228 1
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995242.550144 1
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995242.8343484 1
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995243.1324236 1
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995243.4286764 1
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995243.716169 1
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995244.0071964 1
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995244.2974432 1
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995244.5883846 1
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995244.885864 1
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995245.1784155 1
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995245.471688 1
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995245.7627902 1
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995246.0586913 1
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995246.3511813 1
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995246.6344576 1
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995246.9289541 1
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995247.2309735 1
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995247.5171728 1
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995247.8036451 1
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995248.0976288 1
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995248.3884442 1
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995248.6791039 1
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995248.969508 1
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995249.2582123 1
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995249.5534642 1
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995249.8482287 1
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995250.1390674 1
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995250.428614 1
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995250.717781 1
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995251.0101168 1
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Profiling batch size: 2
+1758995251.30133 2
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995251.8427038 2
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995252.4034472 2
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995252.9486628 2
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995253.4913492 2
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995254.0270593 2
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995254.5713196 2
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995255.122742 2
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995255.6648526 2
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995256.203148 2
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995256.7467446 2
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995257.291567 2
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995257.8220918 2
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995258.3750908 2
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995258.923368 2
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995259.4797256 2
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995260.0221634 2
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995260.5617735 2
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995261.1172893 2
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995261.6773098 2
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995262.2368152 2
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995262.7814424 2
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995263.3341615 2
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995263.8835568 2
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995264.4297786 2
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Profiling batch size: 4
+1758995264.9779058 4
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995266.0296113 4
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995267.0875552 4
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995268.1428022 4
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995269.20134 4
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995270.2571487 4
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995271.2976303 4
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995272.3518367 4
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995273.3985145 4
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995274.4432783 4
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995275.4840832 4
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995276.5429523 4
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+1758995277.6111138 2
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+
+Batch size 1:
+  Avg latency: 0.2517 s
+  Throughput: 3.97 samples/s
+  GPU memory delta: 0.00 MB
+  GPU utilization: 1.6%
+
+Batch size 2:
+  Avg latency: 0.5066 s
+  Throughput: 3.95 samples/s
+  GPU memory delta: 0.00 MB
+  GPU utilization: 1.7%
+
+Batch size 4:
+  Avg latency: 0.9744 s
+  Throughput: 4.11 samples/s
+  GPU memory delta: 0.00 MB
+  GPU utilization: 1.8%
+--------- Exp 2 real batching---------
+Profiling batch size: 1
+1758995278.1703322 1
+batch_synthesize_new
+Model kv cache: False
+1758995278.3474789 1
+batch_synthesize_new
+Model kv cache: False
+1758995278.5233078 1
+batch_synthesize_new
+Model kv cache: False
+1758995278.696424 1
+batch_synthesize_new
+Model kv cache: False
+1758995278.8681874 1
+batch_synthesize_new
+Model kv cache: False
+1758995279.0423563 1
+batch_synthesize_new
+Model kv cache: False
+1758995279.2173345 1
+batch_synthesize_new
+Model kv cache: False
+1758995279.3885343 1
+batch_synthesize_new
+Model kv cache: False
+1758995279.5628767 1
+batch_synthesize_new
+Model kv cache: False
+1758995279.7345881 1
+batch_synthesize_new
+Model kv cache: False
+1758995279.9066706 1
+batch_synthesize_new
+Model kv cache: False
+1758995280.0746338 1
+batch_synthesize_new
+Model kv cache: False
+1758995280.2439985 1
+batch_synthesize_new
+Model kv cache: False
+1758995280.4183369 1
+batch_synthesize_new
+Model kv cache: False
+1758995280.5898013 1
+batch_synthesize_new
+Model kv cache: False
+1758995280.7617974 1
+batch_synthesize_new
+Model kv cache: False
+1758995280.9352717 1
+batch_synthesize_new
+Model kv cache: False
+1758995281.1062498 1
+batch_synthesize_new
+Model kv cache: False
+1758995281.277128 1
+batch_synthesize_new
+Model kv cache: False
+1758995281.4543672 1
+batch_synthesize_new
+Model kv cache: False
+1758995281.636554 1
+batch_synthesize_new
+Model kv cache: False
+1758995281.8050406 1
+batch_synthesize_new
+Model kv cache: False
+1758995281.9758244 1
+batch_synthesize_new
+Model kv cache: False
+1758995282.1444209 1
+batch_synthesize_new
+Model kv cache: False
+1758995282.3171809 1
+batch_synthesize_new
+Model kv cache: False
+1758995282.4930384 1
+batch_synthesize_new
+Model kv cache: False
+1758995282.6619434 1
+batch_synthesize_new
+Model kv cache: False
+1758995282.838953 1
+batch_synthesize_new
+Model kv cache: False
+1758995283.012643 1
+batch_synthesize_new
+Model kv cache: False
+1758995283.1796823 1
+batch_synthesize_new
+Model kv cache: False
+1758995283.3775666 1
+batch_synthesize_new
+Model kv cache: False
+1758995283.5555577 1
+batch_synthesize_new
+Model kv cache: False
+1758995283.7386582 1
+batch_synthesize_new
+Model kv cache: False
+1758995283.9161742 1
+batch_synthesize_new
+Model kv cache: False
+1758995284.0855331 1
+batch_synthesize_new
+Model kv cache: False
+1758995284.259906 1
+batch_synthesize_new
+Model kv cache: False
+1758995284.4320126 1
+batch_synthesize_new
+Model kv cache: False
+1758995284.6041913 1
+batch_synthesize_new
+Model kv cache: False
+1758995284.773319 1
+batch_synthesize_new
+Model kv cache: False
+1758995284.9492486 1
+batch_synthesize_new
+Model kv cache: False
+1758995285.120778 1
+batch_synthesize_new
+Model kv cache: False
+1758995285.2874398 1
+batch_synthesize_new
+Model kv cache: False
+1758995285.4597657 1
+batch_synthesize_new
+Model kv cache: False
+1758995285.6315417 1
+batch_synthesize_new
+Model kv cache: False
+1758995285.8002722 1
+batch_synthesize_new
+Model kv cache: False
+1758995285.9738824 1
+batch_synthesize_new
+Model kv cache: False
+1758995286.1466622 1
+batch_synthesize_new
+Model kv cache: False
+1758995286.3200834 1
+batch_synthesize_new
+Model kv cache: False
+1758995286.490556 1
+batch_synthesize_new
+Model kv cache: False
+1758995286.668662 1
+batch_synthesize_new
+Model kv cache: False
+Profiling batch size: 2
+1758995286.8432643 2
+batch_synthesize_new
+Model kv cache: False
+1758995287.0407715 2
+batch_synthesize_new
+Model kv cache: False
+1758995287.2101762 2
+batch_synthesize_new
+Model kv cache: False
+1758995287.3780756 2
+batch_synthesize_new
+Model kv cache: False
+1758995287.5538907 2
+batch_synthesize_new
+Model kv cache: False
+1758995287.7267118 2
+batch_synthesize_new
+Model kv cache: False
+1758995287.899172 2
+batch_synthesize_new
+Model kv cache: False
+1758995288.074565 2
+batch_synthesize_new
+Model kv cache: False
+1758995288.2461007 2
+batch_synthesize_new
+Model kv cache: False
+1758995288.421358 2
+batch_synthesize_new
+Model kv cache: False
+1758995288.5992458 2
+batch_synthesize_new
+Model kv cache: False
+1758995288.7668242 2
+batch_synthesize_new
+Model kv cache: False
+1758995288.937322 2
+batch_synthesize_new
+Model kv cache: False
+1758995289.1116312 2
+batch_synthesize_new
+Model kv cache: False
+1758995289.285482 2
+batch_synthesize_new
+Model kv cache: False
+1758995289.4578183 2
+batch_synthesize_new
+Model kv cache: False
+1758995289.6343765 2
+batch_synthesize_new
+Model kv cache: False
+1758995289.8057697 2
+batch_synthesize_new
+Model kv cache: False
+1758995289.9745114 2
+batch_synthesize_new
+Model kv cache: False
+1758995290.1556623 2
+batch_synthesize_new
+Model kv cache: False
+1758995290.3253036 2
+batch_synthesize_new
+Model kv cache: False
+1758995290.5067925 2
+batch_synthesize_new
+Model kv cache: False
+1758995290.684324 2
+batch_synthesize_new
+Model kv cache: False
+1758995290.865327 2
+batch_synthesize_new
+Model kv cache: False
+1758995291.0459511 2
+batch_synthesize_new
+Model kv cache: False
+Profiling batch size: 4
+1758995291.2233753 4
+batch_synthesize_new
+Model kv cache: False
+1758995291.4057071 4
+batch_synthesize_new
+Model kv cache: False
+1758995291.5833223 4
+batch_synthesize_new
+Model kv cache: False
+1758995291.7679002 4
+batch_synthesize_new
+Model kv cache: False
+1758995291.9447813 4
+batch_synthesize_new
+Model kv cache: False
+1758995292.131362 4
+batch_synthesize_new
+Model kv cache: False
+1758995292.307633 4
+batch_synthesize_new
+Model kv cache: False
+1758995292.4895132 4
+batch_synthesize_new
+Model kv cache: False
+1758995292.673373 4
+batch_synthesize_new
+Model kv cache: False
+1758995292.8540542 4
+batch_synthesize_new
+Model kv cache: False
+1758995293.0371752 4
+batch_synthesize_new
+Model kv cache: False
+1758995293.20889 4
+batch_synthesize_new
+Model kv cache: False
+1758995293.392602 2
+batch_synthesize_new
+Model kv cache: False
+
+Batch size 1:
+  Avg latency: 0.1328 s
+  Throughput: 7.53 samples/s
+  GPU memory delta: 0.00 MB
+  GPU utilization: 1.9%
+
+Batch size 2:
+  Avg latency: 0.1340 s
+  Throughput: 14.93 samples/s
+  GPU memory delta: 0.00 MB
+  GPU utilization: 3.0%
+
+Batch size 4:
+  Avg latency: 0.1383 s
+  Throughput: 28.92 samples/s
+  GPU memory delta: 0.00 MB
+  GPU utilization: 5.9%

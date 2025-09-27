@@ -1,0 +1,208 @@
+/home/ubuntu/ml_engineer/.venv/lib/python3.12/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/home/ubuntu/ml_engineer/.venv/lib/python3.12/site-packages/numpy/_core/_methods.py:144: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/home/ubuntu/ml_engineer/.venv/lib/python3.12/site-packages/numpy/_core/fromnumeric.py:3860: RuntimeWarning: Mean of empty slice.
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/home/ubuntu/ml_engineer/.venv/lib/python3.12/site-packages/numpy/_core/_methods.py:144: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+warmup
+Benchmarking baseline TTS inference...
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Baseline Results:
+  Num of requests: 3
+  Average Latency: 2.142s
+  95th Percentile Latency: 3.023s
+  Average RTF: 453.403
+  Throughput: 0.5 samples/second
+--------- Exp 6 precision and device---------
+Benchmarking baseline TTS inference...
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Quantization precision: tokens torch.int64
+Model kv cache: False
+Quantization precision: torch.float32, torch.float32, torch.float32
+Baseline Results:
+  Num of requests: 10
+  Average Latency: 2.781s
+  95th Percentile Latency: 3.264s
+  Average RTF: 85.068
+  Throughput: 0.4 samples/second
+
+Profiling Results:
+Section: text_to_tokens
+  Latency (s): 0.020573157530564528
+  Memory delta (MB): 0.0010892427884615385
+  GPU utilization (%): 30.923076923076923
+Section: encode_text
+  Latency (s): 0.031051727441641
+  Memory delta (MB): 0.8452524038461539
+  GPU utilization (%): 12.846153846153847
+Section: decode_mel
+  Latency (s): 2.3804782720712514
+  Memory delta (MB): 0.13112229567307693
+  GPU utilization (%): 82.61538461538461
+Section: vocoder_inference
+  Latency (s): 0.027376376665555514
+  Memory delta (MB): 0.013296274038461538
+  GPU utilization (%): 78.23076923076923
+Section: synchronize
+  Latency (s): 0.020638557580801156
+  Memory delta (MB): 0.0
+  GPU utilization (%): 74.23076923076923
+Section: to_cpu
+  Latency (s): 0.021482119193443887
+  Memory delta (MB): 0.0
+  GPU utilization (%): 74.3076923076923
+
+Profiling Results:
+Section: inference
+  Latency (s): 2.654291923229511
+  Memory delta (MB): 0.625
+  GPU utilization (%): 71.76923076923077
+--------- Exp 6 precision and device auto ---------
+prepare_model_for_precision: policy: DevicePolicy(device_str='cuda:0', precision='fp32', autocast_dtype=None)
+prepare_model_for_precision: policy.precision: fp32
+Benchmarking baseline TTS inference...
+Synthesizing text of length 12 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: None
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 32 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: None
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 44 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: None
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 76 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: None
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 124 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: None
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 128 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: None
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 229 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: None
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 224 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: None
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 202 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: None
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Synthesizing text of length 307 with quantization=True, eff_3=True, eff_4=True
+Device: cuda
+synthesize kv_cache: True
+Using precision: None
+Model kv cache: decode_mel_kv_cache
+Model kv cache: True
+Quantization enabled: torch.float16, torch.float16, torch.float32
+Baseline Results:
+  Num of requests: 10
+  Average Latency: 0.677s
+  95th Percentile Latency: 2.534s
+  Average RTF: 289.473
+  Throughput: 1.5 samples/second
+
+Profiling Results:
+Section: text_to_tokens
+  Latency (s): 0.0003561973571777344
+  Memory delta (MB): 0.00126953125
+  GPU utilization (%): nan
+Section: encode_text
+  Latency (s): 0.03562948703765869
+  Memory delta (MB): 38.246875
+  GPU utilization (%): 3.9
+Section: decode_mel
+  Latency (s): 0.5027035236358642
+  Memory delta (MB): 31.12685546875
+  GPU utilization (%): 6.1
+Section: vocoder_inference
+  Latency (s): 0.028743481636047362
+  Memory delta (MB): 0.41064453125
+  GPU utilization (%): 6.2
+Section: synchronize
+  Latency (s): nan
+  Memory delta (MB): nan
+  GPU utilization (%): nan
+Section: to_cpu
+  Latency (s): 0.021608424186706544
+  Memory delta (MB): 0.0
+  GPU utilization (%): 5.2
+
+Profiling Results:
+Section: inference
+  Latency (s): 0.6978313684463501
+  Memory delta (MB): 0.0
+  GPU utilization (%): 7.2
+--------- Exp 6 ---------
