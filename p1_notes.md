@@ -14,13 +14,6 @@ You need to benchmark ASR models across different dialects and measure WER vs la
 4. **"How would you approach optimizing for mobile/edge deployment?"**
 5. **"Describe a time when you had to balance model accuracy vs inference speed."**
 
-**Performance Metrics:**
-- WER per dialect and overall
-- Character Error Rate (CER)
-- Real-time factor (RTF)
-- 95th percentile latency
-
-
 done:
 
 Missing:

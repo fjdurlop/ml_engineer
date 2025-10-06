@@ -67,7 +67,7 @@ Optimizations implemented:
 - KV caching in decoding step, reducing quadratic inference time to linear
 
 ## Part 2: ASR Evaluation
-Report: [Report_p3](p3.md)
+Report: [Report_p2](p2.md)
 
 Solution: [`asr_evaluation_framework.py`](asr_evaluation_framework.py:1)
 

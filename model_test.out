@@ -1,0 +1,21 @@
+
+=== Normality per model (Shapiro–Wilk) ===
+small: W=0.966, p=0.8517
+medium: W=0.934, p=0.6233
+large: W=0.907, p=0.4473
+
+=== Homogeneity of variances (Levene) ===
+Levene: stat=0.304, p=0.7437
+
+=== One-way ANOVA ===
+F=0.430, p=0.6604
+→ No significant differences; no post-hoc needed.
+
+=== Summary (models) ===
+Metric: wer_mean
+All groups normal? Yes
+Main test: One-way ANOVA (Games–Howell post-hoc if significant).
+Outputs:
+ - figs/boxplot_models.png
+ - figs/posthoc_gameshowell_models.png or figs/posthoc_dunn_models.png (if significant)
+ - tables/posthoc_gameshowell_models.csv or tables/posthoc_dunn_models.csv (if significant)

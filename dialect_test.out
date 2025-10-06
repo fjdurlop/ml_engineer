@@ -1,0 +1,23 @@
+
+=== Normality per dialect (Shapiro–Wilk) ===
+standard: W=0.957, p=0.5998
+southern: W=0.953, p=0.5842
+british: W=0.980, p=0.7284
+australian: W=0.991, p=0.8223
+indian: W=0.850, p=0.2409
+
+=== Homogeneity of variances (Levene) ===
+Levene: stat=0.219, p=0.9218
+
+=== One-way ANOVA ===
+F=0.240, p=0.9091
+→ No significant differences; no post-hoc needed.
+
+=== Summary (dialects) ===
+Metric: wer_mean
+All groups normal? Yes
+Main test: One-way ANOVA (Games–Howell post-hoc if significant).
+Outputs:
+ - figs/boxplot_dialects.png
+ - figs/posthoc_gameshowell_dialects.png or figs/posthoc_dunn_dialects.png (if significant)
+ - tables/posthoc_gameshowell_dialects.csv or tables/posthoc_dunn_dialects.csv (if significant)

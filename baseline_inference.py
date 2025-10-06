@@ -17,6 +17,7 @@ from profiling_utils import GPUProfiler
 from utils import detect_auto_policy, prepare_model_for_precision, DevicePolicy
 
 MODELS_DIR = "models"
+DEBUG = True
 
 profiler = GPUProfiler()
 policy = DevicePolicy("cuda:0", "fp32", torch.float32)
@@ -91,6 +92,10 @@ class SimpleTTSModel(nn.Module):
             # Start with zero frame
             mel_input = torch.zeros(batch_size, 1, self.mel_dim, device=device, dtype=text_encoded.dtype)
         
+        print(f" mel_input.shape {batch_size}")
+        
+        print(f" mel_input.shape {mel_input.shape}")
+        
         outputs = []
         stop_probs = []
         
@@ -118,6 +123,7 @@ class SimpleTTSModel(nn.Module):
         mel_output = torch.cat(outputs, dim=1)
         stop_probs = torch.cat(stop_probs, dim=1)
         
+        print(f" stop_probs.shape {stop_probs.shape}")
         return mel_output, stop_probs
     
     def decode_mel_kv_cache(self, text_encoded, mel_input=None, max_length=500):
@@ -240,7 +246,8 @@ class SimpleTTSModel(nn.Module):
 
                     k_cat = k_new if self_kv[l]["k"] is None else torch.cat([self_kv[l]["k"], k_new], dim=2)
                     v_cat = v_new if self_kv[l]["v"] is None else torch.cat([self_kv[l]["v"], v_new], dim=2)
-
+                    
+                    # q*k and then *v, for new Knew and Vnew
                     y = _attend(q, k_cat, v_cat, is_causal=True)             # [B,h,1,Dh]
                     y = _merge_heads(y)                                      # [B,1,H]
                     y = layer.self_attn.out_proj(y)                          # out_proj from MHA
@@ -330,12 +337,12 @@ class SimpleTTSModel(nn.Module):
             with profiler.profile_section_improved(section_name):
                 # task to profile
                 if self.kv_cache:
-                    print(f"Model kv cache: decode_mel_kv_cache")
-                    print(f"Model kv cache: {self.kv_cache}")
+                    if DEBUG: print(f"Model kv cache: decode_mel_kv_cache")
+                    if DEBUG: print(f"Model kv cache: {self.kv_cache}")
                     # Inference mode: autoregressive generation
                     mel_output, stop_probs = self.decode_mel_kv_cache(text_encoded)
                 else:
-                    print(f"Model kv cache: {self.kv_cache}")
+                    if DEBUG: print(f"Model kv cache: {self.kv_cache}")
                     # Inference mode: autoregressive generation
                     mel_output, stop_probs = self.decode_mel(text_encoded)
                     
@@ -395,7 +402,7 @@ class BaselineTTSInference:
         with profiler.profile_section_improved(section_name):
             # Tokenize text
             tokens = self.text_to_tokens(text)
-            print(f"Quantization precision: tokens {tokens.dtype}")
+            if DEBUG: print(f"Quantization precision: tokens {tokens.dtype}")
             
     
         
@@ -407,7 +414,7 @@ class BaselineTTSInference:
                 print(f"synthesize kv_cache: {kv_cache}")
                 self.model.kv_cache = True
             audio, mel_spec, stop_probs = self.model(tokens)
-            print(f"Quantization precision: {audio.dtype}, {mel_spec.dtype}, {stop_probs.dtype}")
+            if DEBUG: print(f"Quantization precision: {audio.dtype}, {mel_spec.dtype}, {stop_probs.dtype}")
             
         
         section_name = "synchronize"
@@ -461,8 +468,8 @@ class BaselineTTSInference:
         #eff_3 = True
         #eff_4 = True
         
-        print(f"Synthesizing text of length {len(text)} with quantization={quantization}, eff_3={eff_3}, eff_4={eff_4}")
-        print(f"Device: {self.device}")
+        if DEBUG: print(f"Synthesizing text of length {len(text)} with quantization={quantization}, eff_3={eff_3}, eff_4={eff_4}")
+        if DEBUG: print(f"Device: {self.device}")
         
         start_time = time.time()
         
@@ -486,15 +493,15 @@ class BaselineTTSInference:
         with torch.no_grad():
             
             if kv_cache:
-                print(f"synthesize kv_cache: {kv_cache}")
+                if DEBUG: print(f"synthesize kv_cache: {kv_cache}")
                 self.model.kv_cache = True
 
             # Autocast for matmuls/conv — keeps numerics stable
-            print(f"Using precision: {policy.autocast_dtype}")
+            if DEBUG: print(f"Using precision: {policy.autocast_dtype}")
             
             with torch.autocast(device_type="cuda", dtype=policy.autocast_dtype):
                 audio, mel_spec, stop_probs = self.model(tokens)
-                print(f"Quantization enabled: {audio.dtype}, {mel_spec.dtype}, {stop_probs.dtype}")
+                if DEBUG: print(f"Quantization enabled: {audio.dtype}, {mel_spec.dtype}, {stop_probs.dtype}")
                 
         
         section_name = "to_cpu"
@@ -528,6 +535,10 @@ class BaselineTTSInference:
                     audio_cpu = audio.detach().cpu()
                 
                 audio_np = audio_cpu.numpy()
+                ## todo: use elapsed_time
+                # "e2e_ms": e2e_s * 1000.0,
+                #"gpu_forward_ms": gpu_ms,
+                #"d2h_ms": d2h_ms,
             
         end_time = time.time()
         
@@ -559,7 +570,7 @@ class BaselineTTSInference:
             tokens = self.text_to_tokens_batch(texts)  # (B, T)
             assert type
             audio, mel_spec, stop_probs = self.model(tokens)  # uses updated decode_mel
-
+            if DEBUG: print(f"batch_synthesize_new {audio.shape}")
         if torch.cuda.is_available():
             torch.cuda.synchronize()
         end_wall = time.time()
@@ -725,6 +736,7 @@ def main():
         )
 
         for bsz, stats in results.items():
+            print(f"len: {len(stats)}")
             print(f"\nBatch size {bsz}:")
             print(f"  Avg latency: {stats['latency']:.4f} s")
             print(f"  Throughput: {stats['throughput']:.2f} samples/s")
@@ -748,6 +760,7 @@ def main():
         print("\nProfiling Results:")
         section = "inference"
         print(f"Section: {section}")
+        print(f"len: {len(profiler.timings[section])}")
         print(f"  Latency (s): {np.mean(profiler.timings[section])}")
         print(f"  Memory delta (MB): {np.mean(profiler.memory_usage[section])}")
         print(f"  GPU utilization (%): {np.mean(profiler.gpu_utilization_section[section])}")
@@ -775,6 +788,7 @@ def main():
         print("\nProfiling Results:")
         for section in individual_sections:
             if section in profiler.timings:
+                print(f"len: {len(profiler.timings[section])}")
                 print(f"Section: {section}")
                 print(f"  Latency (s): {np.mean(profiler.timings[section])}")
                 print(f"  Memory delta (MB): {np.mean(profiler.memory_usage[section])}")
@@ -783,6 +797,8 @@ def main():
         print("\nProfiling Results:")
         section = "inference"
         print(f"Section: {section}")
+        print(f"len: {len(profiler.timings[section])}")
+        
         print(f"  Latency (s): {np.mean(profiler.timings[section])}")
         print(f"  Memory delta (MB): {np.mean(profiler.memory_usage[section])}")
         print(f"  GPU utilization (%): {np.mean(profiler.gpu_utilization_section[section])}")
